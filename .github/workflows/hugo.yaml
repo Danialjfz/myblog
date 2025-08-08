@@ -27,7 +27,6 @@ defaults:
   run:
     # GitHub-hosted runners automatically enable `set -eo pipefail` for Bash shells.
     shell: bash
-    working-directory: ./quickstart
 
 jobs:
   # Build job
@@ -59,7 +58,6 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
-        working-directory: ./quickstart
       - name: Cache Restore
         id: cache-restore
         uses: actions/cache/restore@v4
@@ -88,7 +86,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./quickstart/public
+          path: ./public
 
   # Deployment job
   deploy:

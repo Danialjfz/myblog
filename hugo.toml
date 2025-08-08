@@ -1,0 +1,7 @@
+baseURL = 'https://danialjfz.github.io/Hugo-website/'
+languageCode = 'en-us'
+title = "Dani's Blog"
+theme = 'blowfish'
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
