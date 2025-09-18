@@ -14,13 +14,13 @@ title = "Dani's Blog"
   # description = "My awesome website"
   # copyright = "Copy, _right?_ :thinking_face:"
 
-# [params.author]
-#   name = "Dani"
-#   email = "Danialj999@gmail.com"
+ [params.author]
+   name = "Dani"
+   email = "Danialj999@gmail.com"
 #   image = "img/blowfish_logo.png"
 #   imageQuality = 96
-#   headline = "I'm only human"
-#   bio = "A little bit about you"
+   headline = "I'm an amazing human"
+   bio = "A little bit about you"
 #   links = [
 #     { email = "mailto:hello@your_domain.com" },
 #     { link = "https://link-to-some-website.com/" },

@@ -8,7 +8,7 @@ baseURL = "https://danialjfz.github.io/Hugo-website/"
 title = "Dani's Blog"
 defaultContentLanguage = "en"
 
-# pluralizeListTitles = "true" # hugo function useful for non-english languages, find out more in  https://gohugo.io/getting-started/configuration/#pluralizelisttitles
+
 
 enableRobotsTXT = true
 summaryLength = 0
@@ -69,3 +69,4 @@ enableEmoji = true
       name = 'fragmentrefs'
       type = 'fragments'
       weight = 10
+
