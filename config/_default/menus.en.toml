@@ -26,13 +26,13 @@ pageRef = "posts"
 weight = 20
 
 [[main]]
-name = "Tags"
-pageRef = "tags"
+name = "Resume"
+pageRef = "Resume"
 weight = 30
 
 [[main]]
-name = "Categories"
-pageRef = "categories"
+name = "Projects"
+pageRef = "Projects"
 weight = 40
 
 #[[main]]
