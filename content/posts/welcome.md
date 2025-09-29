@@ -7,7 +7,7 @@ tags: ["welcome", "intro"]
 categories: ["General"]
 ---
 
-# Welcome to My Blog!
+
 
 This is my first blog post. I'm excited to start sharing my thoughts and experiences here.
 
