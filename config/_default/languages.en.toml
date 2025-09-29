@@ -17,7 +17,7 @@ title = "Dani's Blog"
  [params.author]
    name = "Dani"
    email = "Danialj999@gmail.com"
-#   image = "img/blowfish_logo.png"
+   image = "img/blowfish_logo.png"
 #   imageQuality = 96
    headline = "I'm an amazing human"
    bio = "A little bit about you"
