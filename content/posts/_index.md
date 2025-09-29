@@ -5,6 +5,6 @@ draft: false
 description: "All blog posts from Dani's Blog"
 ---
 
-# Blog Posts
+
 
 Here are all my blog posts, organized chronologically. Dive in and explore!

@@ -9,7 +9,7 @@ title = "Dani's Blog"
   isoCode = "en"
   rtl = false
   dateFormat = "2 January 2006"
-  # logo = "img/logo.png"
+logo = "workspaces/Hugo-website/assets/img/Joker.png"
   # secondaryLogo = "img/secondary-logo.png"
   # description = "My awesome website"
   # copyright = "Copy, _right?_ :thinking_face:"
@@ -17,7 +17,7 @@ title = "Dani's Blog"
  [params.author]
    name = "Dani"
    email = "Danialj999@gmail.com"
-   image = "/workspaces/Hugo-website/assets/img/Joker.png"
+   image = "workspaces/Hugo-website/assets/img/Joker.png"
 #   imageQuality = 96
    headline = "I'm an amazing human"
    bio = "A little bit about you"
