@@ -1,11 +1,12 @@
 ---
-title: "About Me"
+title: "About Danial Jafarzadeh"
 date: 2025-08-08
 draft: false
-description: "Learn more about Dani and this blog"
+description: "Learn more about Danial Jafarzadeh - a software developer passionate about clean code, continuous learning, and sharing tech knowledge."
+keywords: ["Danial Jafarzadeh", "software developer", "programmer", "tech blogger", "web developer", "about"]
 ---
 
-## Hey, I'm Dani! 👨‍💻
+## Hey, I'm Danial Jafarzadeh! 👨‍💻
 
 Welcome to my digital space! I'm a developer, learner, and occasional tech tinkerer who believes that the best way to learn is by doing—and then sharing what you've discovered.
 

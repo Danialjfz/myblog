@@ -2,25 +2,25 @@ disabled = false
 languageCode = "en"
 languageName = "English"
 weight = 1
-title = "Dani's Blog"
+title = "Danial Jafarzadeh - Developer Blog"
 
 [params]
   displayName = "EN"
   isoCode = "en"
   rtl = false
   dateFormat = "2 January 2006"
-  # logo = "img/Joker.png"
+  logo = "img/Joker.png"
   # secondaryLogo = "img/secondary-logo.png"
-  # description = "My awesome website"
+  description = "Danial Jafarzadeh's personal blog featuring tech tutorials, development insights, and programming best practices. Follow my journey in software development and technology."
   # copyright = "Copy, _right?_ :thinking_face:"
 
  [params.author]
-   name = "Dani"
+   name = "Danial Jafarzadeh"
    email = "Danialj999@gmail.com"
    image = "img/Joker.png"
 #   imageQuality = 96
-   headline = "Welcome to my blog"
-#   bio = "A little bit about you"
+   headline = "Developer & Tech Enthusiast"
+   bio = "Software developer passionate about writing clean code, sharing knowledge, and exploring new technologies. Welcome to my corner of the web where I document my learning journey and share practical development insights."
 #   links = [
 #     { email = "mailto:hello@your_domain.com" },
 #     { link = "https://link-to-some-website.com/" },
