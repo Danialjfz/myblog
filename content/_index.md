@@ -5,7 +5,5 @@ draft: false
 description: "Personal blog sharing thoughts, tech insights, and experiences"
 ---
 
-# Welcome to My Blog!
 
 Hi there! I'm Dani, and this is my personal space on the web where I share my thoughts, technical insights, and experiences.
-
