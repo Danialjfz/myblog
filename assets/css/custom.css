@@ -1,0 +1,17 @@
+/* Custom width overrides for Blowfish theme */
+
+/* Increase readable text width on pages/posts */
+.article-content.max-w-prose,
+#single_header.max-w-prose,
+footer.max-w-prose {
+  /* Tailwind's default max-w-prose is ~65ch; increase for wider text */
+  max-width: 80ch;
+}
+
+/* Optional: slightly widen the overall container on large screens */
+@media (min-width: 1024px) {
+  .max-w-7xl {
+    /* Default 7xl is 80rem; bump a bit while keeping within viewport */
+    max-width: min(90rem, 95vw);
+  }
+}
