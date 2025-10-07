@@ -5,7 +5,7 @@
 theme = "blowfish" # UNCOMMENT THIS LINE
 
 baseURL = "https://danialjfz.github.io/Danial-s-Blog/"
-title = "Dani's Blog"
+title = "My Blog"
 defaultContentLanguage = "en"
 
 
