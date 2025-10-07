@@ -1,5 +1,5 @@
 ---
-title: "Danial Jafarzadeh - Personal Blog"
+# title: "Danial Jafarzadeh - Personal Blog"
 date: 2025-08-08
 draft: false
 description: "Welcome to Danial Jafarzadeh's tech blog. Explore programming tutorials, development insights, and software engineering best practices from a passionate developer."
