@@ -2,14 +2,14 @@ disabled = false
 languageCode = "en"
 languageName = "English"
 weight = 1
-title = "Danial Jafarzadeh - Developer Blog"
+title = "Danial Jafarzadeh - Personal Blog"
 
 [params]
   displayName = "EN"
   isoCode = "en"
   rtl = false
   dateFormat = "2 January 2006"
-  logo = "img/Joker.png"
+  # logo = "img/Joker.png"
   # secondaryLogo = "img/secondary-logo.png"
   description = "Danial Jafarzadeh's personal blog featuring tech tutorials, development insights, and programming best practices. Follow my journey in software development and technology."
   # copyright = "Copy, _right?_ :thinking_face:"
