@@ -5,7 +5,7 @@ draft: false
 description: "My resume"
 ---
 
-# Resume
+## Resume
 
 Welcome to my blog! This is where I share my thoughts, experiences, and insights.
 
