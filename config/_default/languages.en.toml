@@ -17,7 +17,7 @@ title = "Personal Blog"
  [params.author]
    name = "Danial Jafarzadeh"
    email = "Danialj999@gmail.com"
-   image = "img/Joker.png"
+   image = "img/frankenstein.svg"
 #   imageQuality = 96
    headline = "Developer & Tech Enthusiast"
    bio = "Software developer passionate about writing clean code, sharing knowledge, and exploring new technologies. Welcome to my corner of the web where I document my learning journey and share practical development insights."
