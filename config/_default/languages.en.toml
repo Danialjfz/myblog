@@ -9,7 +9,7 @@ title = "Personal Blog"
   isoCode = "en"
   rtl = false
   dateFormat = "2 January 2006"
-  # logo = "img/Joker.png"
+  logo = "img/vampire.png"
   # secondaryLogo = "img/secondary-logo.png"
   description = "Danial Jafarzadeh's personal blog featuring tech tutorials, development insights, and programming best practices. Follow my journey in software development and technology."
   # copyright = "Copy, _right?_ :thinking_face:"
@@ -17,7 +17,7 @@ title = "Personal Blog"
  [params.author]
    name = "Danial Jafarzadeh"
    email = "Danialj999@gmail.com"
-   image = "img/frankenstein.png"
+   image = "img/vampire.png"
 #   imageQuality = 96
    headline = "Developer & Tech Enthusiast"
    bio = "Software developer passionate about writing clean code, sharing knowledge, and exploring new technologies. Welcome to my corner of the web where I document my learning journey and share practical development insights."
