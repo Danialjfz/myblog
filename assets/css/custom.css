@@ -8,6 +8,54 @@ footer.max-w-prose {
   max-width: 80ch;
 }
 
+/* Enhanced typography - readable font and better spacing */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Helvetica Neue', sans-serif;
+  line-height: 1.8; /* Increased from default 1.5 for better readability */
+}
+
+.prose,
+.article-content {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Helvetica Neue', sans-serif;
+  line-height: 1.8;
+  letter-spacing: 0.01em; /* Subtle letter spacing for clarity */
+}
+
+.prose p,
+.article-content p {
+  line-height: 1.9; /* Even more spacing for paragraphs */
+  margin-bottom: 1.5em; /* Add space between paragraphs */
+}
+
+.prose li {
+  line-height: 1.8;
+  margin-bottom: 0.5em; /* Space between list items */
+}
+
+/* Enhanced Typography - Readable Font & Line Spacing */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+}
+
+.prose,
+.article-content {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+}
+
+.prose p {
+  line-height: 1.85;
+  margin-bottom: 1.25em;
+}
+
+.prose li {
+  line-height: 1.75;
+  margin-bottom: 0.5em;
+}
+
 /* Optional: slightly widen the overall container on large screens */
 @media (min-width: 1024px) {
   .max-w-7xl {
