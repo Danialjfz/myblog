@@ -24,8 +24,8 @@
   --color-border: #e2e8f0;
 
   /* Optimal reading dimensions */
-  --content-width: 85ch; /* Wider for better screen utilization */
-  --content-width-wide: 95ch;
+  --content-width: 95ch; /* Wider for better screen utilization */
+  --content-width-wide: 105ch;
 }
 
 /* Dark mode academic palette */
@@ -347,7 +347,7 @@ pre code {
 aside .toc,
 .sidebar .toc,
 [class*="sidebar"] .toc {
-  margin-left: 2rem; /* Extra space from main content */
+  margin-left: 4rem; /* Extra space from main content */
 }
 
 .toc-title {
@@ -611,7 +611,7 @@ nav a:first-child {
   .article-layout-wide {
     display: grid;
     grid-template-columns: 1fr 250px;
-    gap: 5rem; /* Increased gap to push TOC further right */
+    gap: 8rem; /* Much larger gap to push TOC further right */
   }
 
   .sticky-toc {
@@ -620,7 +620,7 @@ nav a:first-child {
     align-self: start;
     max-height: calc(100vh - 8rem);
     overflow-y: auto;
-    margin-left: 3rem; /* Additional left margin for more spacing */
+    margin-left: 5rem; /* Increased left margin for more spacing */
   }
 }
 
