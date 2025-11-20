@@ -476,6 +476,52 @@ article {
 }
 
 /* ========================================================================
+   Header & Navigation Positioning
+   ======================================================================== */
+
+/* Push header navigation further right */
+header nav,
+header .menu,
+.header-menu {
+  margin-left: auto;
+  padding-right: 2rem;
+}
+
+/* Increase header container width */
+header .max-w-7xl,
+header .container {
+  max-width: min(95rem, 98vw) !important;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* Header flex layout adjustments */
+header {
+  width: 100%;
+}
+
+header > div,
+header .flex {
+  width: 100%;
+  max-width: min(95rem, 98vw);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* Adjust menu spacing */
+.menu-item,
+nav a {
+  margin-left: 1.5rem;
+}
+
+.menu-item:first-child,
+nav a:first-child {
+  margin-left: 0;
+}
+
+/* ========================================================================
    Responsive Design - Mobile Academic Layout
    ======================================================================== */
 
@@ -523,6 +569,19 @@ article {
     max-width: 100% !important;
     padding-left: 1.25rem;
     padding-right: 1.25rem;
+  }
+
+  /* Reset header padding on mobile */
+  header > div,
+  header .flex {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  header nav,
+  header .menu,
+  .header-menu {
+    padding-right: 1rem;
   }
 }
 
