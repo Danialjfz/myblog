@@ -374,6 +374,9 @@ aside .toc,
   color: var(--color-text);
   text-decoration: none;
   transition: color 0.2s ease;
+  display: block;
+  padding-left: 0.75rem;
+  text-indent: -0.75rem;
 }
 
 .toc a:hover {
