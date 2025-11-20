@@ -343,6 +343,13 @@ pre code {
   font-size: 0.95rem;
 }
 
+/* Sidebar TOC positioning - push further right */
+aside .toc,
+.sidebar .toc,
+[class*="sidebar"] .toc {
+  margin-left: 2rem; /* Extra space from main content */
+}
+
 .toc-title {
   font-weight: 600;
   font-size: 0.875rem;
@@ -604,7 +611,7 @@ nav a:first-child {
   .article-layout-wide {
     display: grid;
     grid-template-columns: 1fr 250px;
-    gap: 3rem;
+    gap: 5rem; /* Increased gap to push TOC further right */
   }
 
   .sticky-toc {
@@ -613,6 +620,7 @@ nav a:first-child {
     align-self: start;
     max-height: calc(100vh - 8rem);
     overflow-y: auto;
+    margin-left: 3rem; /* Additional left margin for more spacing */
   }
 }
 
