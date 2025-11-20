@@ -25,6 +25,37 @@ enableEmoji = true
 
 [imaging]
   anchor = 'Center'
+  quality = 85
+  resampleFilter = 'Lanczos'
+
+[minify]
+  minifyOutput = true
+  [minify.tdewolff]
+    [minify.tdewolff.html]
+      keepWhitespace = false
+    [minify.tdewolff.css]
+      keepCSS2 = true
+      precision = 1
+    [minify.tdewolff.js]
+      keepVarNames = false
+      precision = 1
+
+[caches]
+  [caches.getjson]
+    dir = ':cacheDir/:project'
+    maxAge = '24h'
+  [caches.getcsv]
+    dir = ':cacheDir/:project'
+    maxAge = '24h'
+  [caches.getresource]
+    dir = ':cacheDir/:project'
+    maxAge = '24h'
+  [caches.images]
+    dir = ':resourceDir/_gen'
+    maxAge = -1
+  [caches.assets]
+    dir = ':resourceDir/_gen'
+    maxAge = -1
 
 [taxonomies]
   tag = "tags"
@@ -33,9 +64,9 @@ enableEmoji = true
   series = "series"
 
 [sitemap]
-  changefreq = 'daily'
+  changefreq = 'weekly'
   filename = 'sitemap.xml'
-  priority = 0.5
+  priority = -1
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]

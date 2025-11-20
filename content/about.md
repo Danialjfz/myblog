@@ -1,9 +1,11 @@
 ---
-title: "About Danial Jafarzadeh"
+title: "About Danial Jafarzadeh | Software Developer & Tech Enthusiast"
 date: 2025-08-08
 draft: false
-description: "Learn more about Danial Jafarzadeh - a software developer passionate about clean code, continuous learning, and sharing tech knowledge."
-keywords: ["Danial Jafarzadeh", "software developer", "programmer", "tech blogger", "web developer", "about"]
+description: "Learn more about Danial Jafarzadeh - a software developer passionate about clean code, continuous learning, and sharing tech knowledge. Discover my journey, interests, and what drives my passion for technology."
+keywords: ["Danial Jafarzadeh", "software developer", "programmer", "tech blogger", "web developer", "about", "developer bio", "tech enthusiast"]
+sitemap:
+  priority: 0.9
 ---
 
 ## Hey, I'm Danial Jafarzadeh! 👨‍💻

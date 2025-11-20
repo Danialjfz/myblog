@@ -1,19 +1,36 @@
 ---
-title: "Resume"
+title: "Danial Jafarzadeh - Resume & Professional Experience"
 date: 2025-08-08
 draft: false
-description: "My resume"
+description: "View Danial Jafarzadeh's professional resume, technical skills, work experience, and qualifications. Explore my background in software development, programming expertise, and career achievements."
+keywords: ["Danial Jafarzadeh resume", "software developer resume", "developer CV", "programming skills", "technical experience", "professional background", "software engineer"]
+sitemap:
+  priority: 0.6
 ---
 
 ## Resume
 
-Welcome to my blog! This is where I share my thoughts, experiences, and insights.
+This page showcases my professional experience, technical skills, and qualifications as a software developer.
 
-## What You'll Find Here
+## Professional Summary
 
-- Tech tutorials and tips
-- Personal reflections
-- Project showcases
-- And much more!
+Software developer passionate about building efficient, scalable solutions and writing clean, maintainable code. Committed to continuous learning and staying current with emerging technologies.
 
-Feel free to reach out if you have any questions or just want to connect.
+## Technical Skills
+
+- **Languages**: [Your programming languages]
+- **Frameworks**: [Your frameworks]
+- **Tools & Technologies**: [Your tools]
+- **Development Practices**: Clean code, version control, testing, documentation
+
+## Experience
+
+*Professional experience and projects will be added here.*
+
+## Education & Certifications
+
+*Educational background and certifications will be listed here.*
+
+---
+
+For a detailed resume or to discuss opportunities, please [contact me](mailto:Danialj999@gmail.com).

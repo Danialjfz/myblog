@@ -1,4 +1,51 @@
+# Robots.txt for Neural Odyssey - Danial Jafarzadeh's Blog
+# Updated for optimal SEO and crawling
+
+# Global rules for all bots
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /search/
 
+# Crawl-delay for politeness (not supported by all bots)
+Crawl-delay: 0.5
+
+# Rules for specific search engines
+
+# Googlebot
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# Google Image Bot
+User-agent: Googlebot-Image
+Allow: /img/
+Allow: /images/
+
+# Bingbot
+User-agent: Bingbot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# Yandex
+User-agent: Yandex
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# Baidu
+User-agent: Baiduspider
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+
+# Sitemap location
 Sitemap: https://danialjfz.github.io/myblog/sitemap.xml

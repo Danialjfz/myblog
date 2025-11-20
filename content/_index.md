@@ -2,8 +2,11 @@
 # title: "Danial Jafarzadeh - Personal Blog"
 date: 2025-08-08
 draft: false
-description: "Welcome to Danial Jafarzadeh's tech blog. Explore programming tutorials, development insights, and software engineering best practices from a passionate developer."
-keywords: ["Danial Jafarzadeh", "developer blog", "programming tutorials", "software development", "tech insights", "coding tips", "web development"]
+description: "Welcome to Neural Odyssey - Danial Jafarzadeh's tech blog. Explore in-depth programming tutorials, software development insights, and best practices. Join a journey through web development, coding techniques, and emerging technologies."
+keywords: ["Danial Jafarzadeh", "developer blog", "programming tutorials", "software development", "tech insights", "coding tips", "web development", "Neural Odyssey", "tech blog"]
+sitemap:
+  priority: 1.0
+  changefreq: daily
 ---
 
 

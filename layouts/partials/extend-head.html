@@ -4,7 +4,7 @@
 <meta name="author" content="Danial Jafarzadeh">
 <meta name="keywords" content="Danial Jafarzadeh, developer blog, programming tutorials, software development, tech insights, coding tips, web development, software engineer">
 
-<!-- JSON-LD Structured Data for Person -->
+<!-- JSON-LD Structured Data for Person & Organization -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -12,23 +12,60 @@
   "name": "Danial Jafarzadeh",
   "url": "{{ site.BaseURL }}",
   "email": "Danialj999@gmail.com",
+  "image": "{{ site.BaseURL }}img/vampire.png",
   "jobTitle": "Software Developer",
   "description": "Software developer passionate about writing clean code, sharing knowledge, and exploring new technologies.",
   "sameAs": [
-    "{{ site.BaseURL }}"
+    "{{ site.BaseURL }}",
+    "{{ site.BaseURL }}about/",
+    "{{ site.BaseURL }}projects/",
+    "{{ site.BaseURL }}resume/"
   ],
-  "alumniOf": {
-    "@type": "Organization",
-    "name": "Software Development"
-  },
   "knowsAbout": [
     "Software Development",
     "Web Development",
     "Programming",
     "Technology",
     "Code Quality",
-    "Best Practices"
-  ]
+    "Best Practices",
+    "Clean Code",
+    "Software Architecture"
+  ],
+  "knowsLanguage": {
+    "@type": "Language",
+    "name": "English"
+  }
+}
+</script>
+
+<!-- JSON-LD for Website -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Neural Odyssey",
+  "alternateName": "Danial Jafarzadeh - Personal Blog",
+  "url": "{{ site.BaseURL }}",
+  "description": "A tech blog featuring programming tutorials, software development insights, and best practices from Danial Jafarzadeh.",
+  "inLanguage": "en-US",
+  "author": {
+    "@type": "Person",
+    "@id": "{{ site.BaseURL }}#person",
+    "name": "Danial Jafarzadeh"
+  },
+  "publisher": {
+    "@type": "Person",
+    "@id": "{{ site.BaseURL }}#person",
+    "name": "Danial Jafarzadeh"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "{{ site.BaseURL }}?s={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
 }
 </script>
 
@@ -37,19 +74,26 @@
 {
   "@context": "https://schema.org",
   "@type": "Blog",
-  "name": "{{ site.Title }}",
-  "url": "{{ site.BaseURL }}",
+  "name": "Neural Odyssey",
+  "url": "{{ site.BaseURL }}posts/",
   "description": "{{ site.Params.description }}",
   "author": {
     "@type": "Person",
+    "@id": "{{ site.BaseURL }}#person",
     "name": "Danial Jafarzadeh",
     "email": "Danialj999@gmail.com"
   },
   "publisher": {
     "@type": "Person",
+    "@id": "{{ site.BaseURL }}#person",
     "name": "Danial Jafarzadeh"
   },
-  "inLanguage": "en-US"
+  "inLanguage": "en-US",
+  "blogPost": {
+    "@type": "BlogPosting",
+    "headline": "Programming tutorials and development insights",
+    "keywords": "software development, programming, web development, tech tutorials"
+  }
 }
 </script>
 

@@ -1,10 +1,13 @@
 ---
-title: "Welcome to My Blog"
+title: "Welcome to Neural Odyssey - A Developer's Journey"
 date: 2025-08-08
 draft: false
-description: "My first blog post"
-tags: ["welcome", "intro"]
-categories: ["General"]
+description: "Welcome to Neural Odyssey! Join Danial Jafarzadeh on a journey through software development, programming tutorials, tech insights, and best practices. Discover quality content about web development, coding tips, and technology trends."
+keywords: ["welcome", "developer blog", "programming tutorials", "software development", "tech blog", "coding journey", "Danial Jafarzadeh", "web development"]
+tags: ["welcome", "intro", "blog launch"]
+categories: ["General", "Announcements"]
+sitemap:
+  priority: 0.8
 ---
 
 
