@@ -5,12 +5,12 @@
 # Refer to the theme docs for more details about each of these parameters.
 # https://blowfish.page/docs/configuration/#theme-parameters
 
-colorScheme = "noir"
-defaultAppearance = "dark" # valid options: light or dark
+colorScheme = "ocean"  # Professional academic blue theme
+defaultAppearance = "light" # Light mode for better readability
 autoSwitchAppearance = true
 
 enableSearch = true
-enableCodeCopy = false
+enableCodeCopy = true  # Enable code copying for tutorials
 
 replyByEmail = false
 
@@ -26,9 +26,9 @@ disableTextInHeader = false
 # defaultFeaturedImage = "IMAGE.jpg" # used as default for featured images in all articles
 # defaultSocialImage = "/android-chrome-512x512.png" # used as default for social media sharing (Open Graph and Twitter)
 
-# highlightCurrentMenuArea = true
-# smartTOC = true
-# smartTOCHideUnfocusedChildren = true
+highlightCurrentMenuArea = true  # Highlight current section
+smartTOC = true  # Smart table of contents
+smartTOCHideUnfocusedChildren = true  # Cleaner TOC
 
 fingerprintAlgorithm = "sha512" # Valid values are "sha512" (default), "sha384", "sha256"
 
@@ -36,7 +36,7 @@ giteaDefaultServer = "https://git.fsfe.org"
 forgejoDefaultServer = "https://v11.next.forgejo.org"
 
 [header]
-  layout = "fixed-fill-blur" # valid options: basic, fixed, fixed-fill, fixed-gradient, fixed-fill-blur
+  layout = "fixed" # Clean, professional fixed header
 
 [footer]
   showMenu = true
@@ -46,30 +46,30 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   showScrollToTop = true
 
 [homepage]
-  layout = "profile" # valid options: page, profile, hero, card, background, custom
-  #homepageImage = "IMAGE.jpg" # used in: hero, and card
-  showRecent = false
+  layout = "page" # Clean, academic page layout
+  #homepageImage = "IMAGE.jpg"
+  showRecent = true  # Show recent publications
   showRecentItems = 5
-  showMoreLink = false
+  showMoreLink = true
   showMoreLinkDest = "/posts/"
   cardView = false
   cardViewScreenWidth = false
-  layoutBackgroundBlur = false # only used when layout equals background
-  disableHeroImageFilter = false # only used when layout equals hero
+  layoutBackgroundBlur = false
+  disableHeroImageFilter = false
 
 [article]
   showDate = true
   showViews = false
   showLikes = false
   showDateOnlyInArticle = false
-  showDateUpdated = false
+  showDateUpdated = true  # Show last updated for academic accuracy
   showAuthor = true
-  # showAuthorBottom = false
+  showAuthorBottom = true  # Author info at bottom like academic papers
   showHero = false
-  heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
-  layoutBackgroundBlur = true # only used when heroStyle equals background or thumbAndBackground
-  layoutBackgroundHeaderSpace = true # only used when heroStyle equals background
-  showBreadcrumbs = false
+  heroStyle = "basic"
+  layoutBackgroundBlur = false
+  layoutBackgroundHeaderSpace = true
+  showBreadcrumbs = true  # Better navigation
   showDraftLabel = true
   showEdit = false
   # editURL = "https://github.com/username/repo/"
@@ -79,32 +79,32 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   showPagination = true
   invertPagination = false
   showReadingTime = true
-  showTableOfContents = false
-  # showRelatedContent = false
+  showTableOfContents = true  # Essential for long-form academic content
+  showRelatedContent = true  # Academic cross-referencing
   # relatedContentLimit = 3
   showTaxonomies = true # use showTaxonomies OR showCategoryOnly, not both
   showCategoryOnly = false # use showTaxonomies OR showCategoryOnly, not both
   showAuthorsBadges = false
   showWordCount = true
-  sharingLinks = [ "linkedin", "twitter", "reddit", "facebook", "email", "whatsapp", "telegram"]
-  showZenMode = false
+  sharingLinks = [ "linkedin", "twitter", "email"]  # Professional sharing only
+  showZenMode = true  # Distraction-free reading mode
 
 [list]
   showHero = false
-  # heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
-  layoutBackgroundBlur = true # only used when heroStyle equals background or thumbAndBackground
-  layoutBackgroundHeaderSpace = true # only used when heroStyle equals background
+  heroStyle = "basic"
+  layoutBackgroundBlur = false
+  layoutBackgroundHeaderSpace = true
   showBreadcrumbs = true
-  showSummary = true
+  showSummary = true  # Show abstracts like academic papers
   showViews = false
   showLikes = false
-  showTableOfContents = false
+  showTableOfContents = true  # Essential for long-form academic content
   showCards = false
   orderByWeight = false
-  groupByYear = true
+  groupByYear = true  # Chronological organization
   cardView = false
   cardViewScreenWidth = false
-  constrainItemsWidth = false
+  constrainItemsWidth = true  # Better readability with constrained width
 
 [sitemap]
   excludedKinds = ["taxonomy", "term"]
@@ -116,7 +116,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   showBreadcrumbs = false
   showViews = false
   showLikes = false
-  showTableOfContents = false
+  showTableOfContents = true  # Essential for long-form academic content
   cardView = false
 
 [term]
