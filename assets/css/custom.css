@@ -24,8 +24,8 @@
   --color-border: #e2e8f0;
 
   /* Optimal reading dimensions */
-  --content-width: 65ch; /* Optimal line length for reading (reduced for better readability) */
-  --content-width-wide: 80ch;
+  --content-width: 85ch; /* Wider for better screen utilization */
+  --content-width-wide: 95ch;
 }
 
 /* Dark mode academic palette */
@@ -60,8 +60,11 @@ footer.max-w-prose,
   max-width: var(--content-width) !important;
   font-size: 1.0625rem; /* 17px - comfortable for long-form reading */
   line-height: 1.7;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
 
 /* Paragraphs - comfortable spacing */
@@ -454,6 +457,25 @@ pre code {
 }
 
 /* ========================================================================
+   Layout & Container Improvements
+   ======================================================================== */
+
+/* Ensure main content container uses more width */
+main,
+.main-content,
+article {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Center content properly */
+.container,
+.max-w-prose {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ========================================================================
    Responsive Design - Mobile Academic Layout
    ======================================================================== */
 
@@ -499,7 +521,8 @@ pre code {
   #single_header.max-w-prose,
   .prose {
     max-width: 100% !important;
-    padding: 0 1rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 }
 
@@ -509,7 +532,13 @@ pre code {
 
 @media (min-width: 1024px) {
   .max-w-7xl {
-    max-width: min(85rem, 90vw);
+    max-width: min(90rem, 95vw);
+  }
+
+  /* Wider content on large screens */
+  .prose,
+  .article-content {
+    max-width: var(--content-width-wide) !important;
   }
 
   /* Sidebar layout for TOC on wide screens */
