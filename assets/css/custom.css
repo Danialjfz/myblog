@@ -3,7 +3,7 @@
    ======================================================================== */
 
 /* ========================================================================
-   CSS Variables - Academic Color Palette
+   CSS Variables - Academic Color Palette & Spacing Scale
    ======================================================================== */
 
 :root {
@@ -13,22 +13,30 @@
   --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
 
   /* Academic color palette - Light mode */
-  --color-primary: #1e40af; /* Deep professional blue */
+  --color-primary: #1e40af;
   --color-primary-hover: #1e3a8a;
-  --color-secondary: #1e293b; /* Slate gray */
-  --color-accent: #0284c7; /* Bright blue for links */
-  --color-text: #1a1a1a; /* Very dark gray for text */
-  --color-text-light: #64748b; /* Light gray for meta */
+  --color-secondary: #1e293b;
+  --color-accent: #0369a1;
+  --color-text: #1a1a1a;
+  --color-text-light: #64748b;
   --color-background: #ffffff;
-  --color-surface: #f8fafc; /* Light gray for code blocks */
+  --color-surface: #f8fafc;
   --color-border: #e2e8f0;
 
-  /* Optimal reading dimensions */
-  --content-width: 95ch; /* Wider for better screen utilization */
-  --content-width-wide: 105ch;
+  /* Content width - optimal for academic reading */
+  --content-width: 68ch;
+
+  /* Consistent spacing scale (based on 0.25rem = 4px) */
+  --space-xs: 0.25rem;   /* 4px */
+  --space-sm: 0.5rem;    /* 8px */
+  --space-md: 1rem;      /* 16px */
+  --space-lg: 1.5rem;    /* 24px */
+  --space-xl: 2rem;      /* 32px */
+  --space-2xl: 3rem;     /* 48px */
+  --space-3xl: 4rem;     /* 64px */
 }
 
-/* Dark mode academic palette */
+/* Dark mode */
 .dark {
   --color-primary: #60a5fa;
   --color-primary-hover: #93c5fd;
@@ -42,53 +50,57 @@
 }
 
 /* ========================================================================
-   Typography & Readability - Academic Standards
+   Base Typography
    ======================================================================== */
 
 body {
   font-family: var(--font-sans);
-  line-height: 1.65;
+  line-height: 1.7;
   letter-spacing: 0.005em;
   color: var(--color-text);
 }
 
-/* Main content area - optimal reading width */
+/* ========================================================================
+   Main Content Width & Centering
+   ======================================================================== */
+
+/* Content prose containers — academic reading width */
 .article-content.max-w-prose,
 #single_header.max-w-prose,
 footer.max-w-prose,
 .prose {
   max-width: var(--content-width) !important;
-  font-size: 1.0625rem; /* 17px - comfortable for long-form reading */
-  line-height: 1.7;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  font-size: 1.0625rem;
+  line-height: 1.75;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
 }
 
-/* Paragraphs - comfortable spacing */
+/* ========================================================================
+   Paragraphs
+   ======================================================================== */
+
 .prose p,
 .article-content p {
   margin-bottom: 1.25em;
-  line-height: 1.7;
+  line-height: 1.75;
   text-align: left;
-  max-width: 100%;
 }
 
 /* ========================================================================
-   Headings - Academic Hierarchy
+   Headings - Academic Hierarchy with Consistent Spacing
    ======================================================================== */
 
 .prose h1,
 .article-content h1,
 #single_header h1 {
   font-family: var(--font-sans);
-  font-size: 2rem; /* 32px - slightly smaller */
+  font-size: 1.875rem;
   font-weight: 700;
   line-height: 1.25;
   margin-top: 0;
-  margin-bottom: 1.25rem;
+  margin-bottom: var(--space-lg);
   color: var(--color-secondary);
   letter-spacing: -0.02em;
 }
@@ -96,11 +108,11 @@ footer.max-w-prose,
 .prose h2,
 .article-content h2 {
   font-family: var(--font-sans);
-  font-size: 1.625rem; /* 26px - more proportional */
+  font-size: 1.5rem;
   font-weight: 600;
   line-height: 1.35;
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
+  margin-top: var(--space-2xl);
+  margin-bottom: var(--space-md);
   color: var(--color-secondary);
   padding-bottom: 0.375rem;
   border-bottom: 2px solid var(--color-border);
@@ -109,27 +121,27 @@ footer.max-w-prose,
 .prose h3,
 .article-content h3 {
   font-family: var(--font-sans);
-  font-size: 1.375rem; /* 22px */
+  font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.4;
-  margin-top: 2rem;
-  margin-bottom: 0.875rem;
+  margin-top: var(--space-xl);
+  margin-bottom: 0.75rem;
   color: var(--color-secondary);
 }
 
 .prose h4,
 .article-content h4 {
   font-family: var(--font-sans);
-  font-size: 1.125rem; /* 18px */
+  font-size: 1.0625rem;
   font-weight: 600;
   line-height: 1.5;
-  margin-top: 1.75rem;
-  margin-bottom: 0.75rem;
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-sm);
   color: var(--color-text);
 }
 
 /* ========================================================================
-   Links - Professional Academic Style
+   Links
    ======================================================================== */
 
 .prose a,
@@ -138,7 +150,7 @@ footer.max-w-prose,
   text-decoration: none;
   font-weight: 500;
   border-bottom: 1px solid transparent;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease, border-color 0.2s ease;
 }
 
 .prose a:hover,
@@ -148,33 +160,32 @@ footer.max-w-prose,
 }
 
 /* ========================================================================
-   Code Blocks - Academic Presentation
+   Code Blocks
    ======================================================================== */
 
 pre,
 code {
   font-family: var(--font-mono);
-  font-size: 0.9em;
+  font-size: 0.875em;
 }
 
 pre {
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: 0.375rem;
-  padding: 1.25rem;
+  padding: var(--space-lg);
   overflow-x: auto;
-  margin: 1.5rem 0;
-  line-height: 1.5;
-  font-size: 0.9375rem;
+  margin: var(--space-lg) 0;
+  line-height: 1.55;
 }
 
 .prose code {
   background-color: var(--color-surface);
   color: #dc2626;
-  padding: 0.2em 0.4em;
+  padding: 0.15em 0.35em;
   border-radius: 0.25rem;
   font-weight: 500;
-  font-size: 0.9em;
+  font-size: 0.875em;
 }
 
 .dark .prose code {
@@ -189,50 +200,52 @@ pre code {
 }
 
 /* ========================================================================
-   Lists - Academic Formatting
+   Lists
    ======================================================================== */
 
 .prose ul,
 .prose ol {
+  margin-top: 0.75rem;
   margin-bottom: 1.25rem;
-  padding-left: 1.75rem;
-  margin-top: 1rem;
+  padding-left: 1.5rem;
 }
 
 .prose li {
-  margin-bottom: 0.375em;
-  line-height: 1.65;
+  margin-bottom: 0.35em;
+  line-height: 1.7;
 }
 
-/* Nested lists */
 .prose li > ul,
 .prose li > ol {
-  margin-top: 0.375em;
-  margin-bottom: 0.375em;
+  margin-top: 0.35em;
+  margin-bottom: 0.35em;
 }
 
 /* ========================================================================
-   Blockquotes - Academic Citation Style
+   Blockquotes
    ======================================================================== */
 
 .prose blockquote {
   border-left: 3px solid var(--color-primary);
-  padding-left: 1.25rem;
-  margin: 1.5rem 0;
+  background-color: var(--color-surface);
+  padding: var(--space-md) var(--space-lg);
+  margin: var(--space-lg) 0;
+  border-radius: 0 0.25rem 0.25rem 0;
   font-style: italic;
   color: var(--color-text-light);
-  background-color: var(--color-surface);
-  padding: 1.25rem;
-  border-radius: 0.25rem;
 }
 
 .prose blockquote p {
   margin-bottom: 0.5em;
-  line-height: 1.6;
+  line-height: 1.65;
+}
+
+.prose blockquote p:last-child {
+  margin-bottom: 0;
 }
 
 /* ========================================================================
-   Strong/Bold - Academic Emphasis
+   Strong/Bold
    ======================================================================== */
 
 .prose strong {
@@ -241,14 +254,14 @@ pre code {
 }
 
 /* ========================================================================
-   Tables - Academic Data Presentation
+   Tables
    ======================================================================== */
 
 .prose table {
   width: 100%;
   border-collapse: collapse;
-  margin: 2rem 0;
-  font-size: 0.95rem;
+  margin: var(--space-xl) 0;
+  font-size: 0.9375rem;
 }
 
 .prose thead {
@@ -257,14 +270,14 @@ pre code {
 }
 
 .prose th {
-  padding: 0.75rem 1rem;
+  padding: 0.625rem 0.875rem;
   text-align: left;
   font-weight: 600;
   color: var(--color-secondary);
 }
 
 .prose td {
-  padding: 0.75rem 1rem;
+  padding: 0.625rem 0.875rem;
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -273,15 +286,15 @@ pre code {
 }
 
 /* ========================================================================
-   Article Metadata - Academic Paper Style
+   Article Metadata
    ======================================================================== */
 
 .article-meta,
 .post-meta {
-  font-size: 0.95rem;
+  font-size: 0.9375rem;
   color: var(--color-text-light);
-  margin: 1.5rem 0 2.5rem 0;
-  padding: 1.25rem;
+  margin: var(--space-md) 0 var(--space-xl) 0;
+  padding: var(--space-md) var(--space-lg);
   background-color: var(--color-surface);
   border-left: 3px solid var(--color-primary);
   border-radius: 0.375rem;
@@ -294,7 +307,7 @@ pre code {
 }
 
 /* ========================================================================
-   Tags & Categories - Academic Classification
+   Tags & Categories
    ======================================================================== */
 
 .article-tags,
@@ -302,22 +315,22 @@ pre code {
 .taxonomy-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin: 1.5rem 0;
+  gap: var(--space-sm);
+  margin: var(--space-lg) 0;
 }
 
 .tag,
 .category,
 .taxonomy-badge {
   display: inline-block;
-  padding: 0.375rem 0.875rem;
+  padding: 0.3rem 0.75rem;
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-radius: 9999px; /* Pill shape */
-  font-size: 0.875rem;
+  border-radius: 9999px;
+  font-size: 0.8125rem;
   color: var(--color-text);
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   font-weight: 500;
 }
 
@@ -327,36 +340,14 @@ pre code {
   background-color: var(--color-primary);
   color: white;
   border-color: var(--color-primary);
-  transform: translateY(-1px);
 }
 
 /* ========================================================================
-   Table of Contents - Academic Navigation
+   Table of Contents — Sidebar
    ======================================================================== */
 
 .toc {
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: 0.5rem;
-  padding: 1.5rem;
-  margin: 2rem 0;
-  font-size: 0.95rem;
-}
-
-/* Sidebar TOC positioning - push further right */
-aside .toc,
-.sidebar .toc,
-[class*="sidebar"] .toc {
-  margin-left: 4rem; /* Extra space from main content */
-}
-
-.toc-title {
-  font-weight: 600;
   font-size: 0.875rem;
-  margin-bottom: 1rem;
-  color: var(--color-secondary);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
 }
 
 .toc ul {
@@ -366,42 +357,67 @@ aside .toc,
 }
 
 .toc li {
-  margin-bottom: 0.5rem;
-  line-height: 1.6;
+  margin-bottom: 0.375rem;
+  line-height: 1.5;
 }
 
 .toc a {
-  color: var(--color-text);
+  color: var(--color-text-light);
   text-decoration: none;
   transition: color 0.2s ease;
-  display: block;
-  padding-left: 0.75rem;
-  text-indent: -0.75rem;
 }
 
 .toc a:hover {
   color: var(--color-primary);
 }
 
-/* Nested TOC levels */
 .toc ul ul {
-  padding-left: 1.25rem;
-  margin-top: 0.5rem;
+  padding-left: 1rem;
+  margin-top: 0.25rem;
 }
 
 /* ========================================================================
-   Pagination - Academic Navigation
+   Homepage
+   ======================================================================== */
+
+.recent-posts {
+  margin: var(--space-xl) 0;
+}
+
+.recent-post-item {
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-xl);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.recent-post-item:last-child {
+  border-bottom: none;
+}
+
+.post-title {
+  font-size: 1.375rem;
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+}
+
+.post-summary {
+  color: var(--color-text-light);
+  line-height: 1.7;
+}
+
+/* ========================================================================
+   Pagination
    ======================================================================== */
 
 .article-pagination,
 .post-navigation {
   display: flex;
   justify-content: space-between;
-  margin: 3rem 0;
-  padding: 1.5rem 0;
+  margin: var(--space-2xl) 0;
+  padding: var(--space-lg) 0;
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
-  gap: 1rem;
+  gap: var(--space-md);
 }
 
 .pagination-link,
@@ -411,10 +427,10 @@ aside .toc,
   max-width: 45%;
   text-decoration: none;
   color: var(--color-text);
-  transition: color 0.2s ease;
-  padding: 1rem;
+  transition: color 0.2s ease, border-color 0.2s ease;
+  padding: var(--space-md);
   background-color: var(--color-surface);
-  border-radius: 0.5rem;
+  border-radius: 0.375rem;
   border: 1px solid var(--color-border);
 }
 
@@ -425,140 +441,62 @@ aside .toc,
 }
 
 .pagination-label {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--color-text-light);
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--space-xs);
 }
 
 .pagination-title {
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.9375rem;
 }
 
 /* ========================================================================
-   Homepage - Academic Journal Style
+   Responsive Design
    ======================================================================== */
 
-.recent-posts {
-  margin: 2rem 0;
-}
-
-.recent-post-item {
-  margin-bottom: 2rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid var(--color-border);
-}
-
-.recent-post-item:last-child {
-  border-bottom: none;
-}
-
-.post-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.post-summary {
-  color: var(--color-text-light);
-  line-height: 1.7;
-}
-
-/* ========================================================================
-   Layout & Container Improvements
-   ======================================================================== */
-
-/* Ensure main content container uses more width */
-main,
-.main-content,
-article {
-  width: 100%;
-  max-width: 100%;
-}
-
-/* Center content properly */
-.container,
-.max-w-prose {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* ========================================================================
-   Header & Navigation Positioning
-   ======================================================================== */
-
-/* Push header navigation further right */
-header nav,
-header .menu,
-.header-menu {
-  margin-left: auto;
-  padding-right: 2rem;
-}
-
-/* Increase header container width */
-header .max-w-7xl,
-header .container {
-  max-width: min(95rem, 98vw) !important;
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-/* Header flex layout adjustments */
-header {
-  width: 100%;
-}
-
-header > div,
-header .flex {
-  width: 100%;
-  max-width: min(95rem, 98vw);
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-/* Adjust menu spacing */
-.menu-item,
-nav a {
-  margin-left: 1.5rem;
-}
-
-.menu-item:first-child,
-nav a:first-child {
-  margin-left: 0;
-}
-
-/* ========================================================================
-   Responsive Design - Mobile Academic Layout
-   ======================================================================== */
-
-@media (max-width: 768px) {
-  .prose,
-  .article-content {
+/* --- Mobile: up to 639px --- */
+@media (max-width: 639px) {
+  .article-content.max-w-prose,
+  #single_header.max-w-prose,
+  footer.max-w-prose,
+  .prose {
+    max-width: 100% !important;
     font-size: 1rem;
-    line-height: 1.65;
+    line-height: 1.7;
+    padding-left: var(--space-md);
+    padding-right: var(--space-md);
   }
 
   .prose h1,
+  .article-content h1,
   #single_header h1 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 
-  .prose h2 {
-    font-size: 1.375rem;
-    margin-top: 2rem;
+  .prose h2,
+  .article-content h2 {
+    font-size: 1.25rem;
+    margin-top: var(--space-xl);
   }
 
-  .prose h3 {
-    font-size: 1.1875rem;
-    margin-top: 1.5rem;
+  .prose h3,
+  .article-content h3 {
+    font-size: 1.0625rem;
+    margin-top: var(--space-lg);
   }
 
   .prose p {
     margin-bottom: 1rem;
+  }
+
+  pre {
+    padding: var(--space-md);
+    font-size: 0.8125rem;
+    margin: var(--space-md) 0;
+    border-radius: 0.25rem;
   }
 
   .article-pagination,
@@ -569,66 +507,39 @@ nav a:first-child {
   .pagination-link,
   .nav-link {
     max-width: 100%;
-    margin-bottom: 1rem;
   }
+}
 
-  /* Adjust content width for mobile */
+/* --- Tablet: 640px to 1023px --- */
+@media (min-width: 640px) and (max-width: 1023px) {
   .article-content.max-w-prose,
   #single_header.max-w-prose,
+  footer.max-w-prose,
   .prose {
-    max-width: 100% !important;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+    max-width: 62ch !important;
+    padding-left: var(--space-lg);
+    padding-right: var(--space-lg);
   }
 
-  /* Reset header padding on mobile */
-  header > div,
-  header .flex {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  header nav,
-  header .menu,
-  .header-menu {
-    padding-right: 1rem;
+  .prose h1,
+  .article-content h1,
+  #single_header h1 {
+    font-size: 1.75rem;
   }
 }
 
-/* ========================================================================
-   Wide Screen Optimization
-   ======================================================================== */
-
+/* --- Desktop: 1024px+ --- */
 @media (min-width: 1024px) {
-  .max-w-7xl {
-    max-width: min(90rem, 95vw);
-  }
-
-  /* Wider content on large screens */
-  .prose,
-  .article-content {
-    max-width: var(--content-width-wide) !important;
-  }
-
-  /* Sidebar layout for TOC on wide screens */
-  .article-layout-wide {
-    display: grid;
-    grid-template-columns: 1fr 250px;
-    gap: 8rem; /* Much larger gap to push TOC further right */
-  }
-
-  .sticky-toc {
-    position: sticky;
-    top: 6rem;
-    align-self: start;
-    max-height: calc(100vh - 8rem);
-    overflow-y: auto;
-    margin-left: 5rem; /* Increased left margin for more spacing */
+  .article-content.max-w-prose,
+  #single_header.max-w-prose,
+  footer.max-w-prose,
+  .prose {
+    max-width: var(--content-width) !important;
   }
 }
 
 /* ========================================================================
-   Print Styles - Academic Paper Printing
+   Print Styles
    ======================================================================== */
 
 @media print {
@@ -674,10 +585,9 @@ nav a:first-child {
 }
 
 /* ========================================================================
-   Accessibility Enhancements
+   Accessibility
    ======================================================================== */
 
-/* Focus visible for keyboard navigation */
 a:focus-visible,
 button:focus-visible {
   outline: 2px solid var(--color-primary);
@@ -685,7 +595,6 @@ button:focus-visible {
   border-radius: 0.25rem;
 }
 
-/* Skip to content link */
 .skip-to-content {
   position: absolute;
   top: -40px;
@@ -702,7 +611,6 @@ button:focus-visible {
   top: 0;
 }
 
-/* Screen reader only text */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -715,7 +623,6 @@ button:focus-visible {
   border-width: 0;
 }
 
-/* Reduced motion for accessibility */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
