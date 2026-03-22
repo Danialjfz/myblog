@@ -1,54 +1,52 @@
 ---
-title: "About Danial Jafarzadeh | Software Developer & Tech Enthusiast"
+title: "About Danial Jafarzadeh | ML and Systems Engineering"
 date: 2025-08-08
 draft: false
-description: "Learn more about Danial Jafarzadeh - a software developer passionate about clean code, continuous learning, and sharing tech knowledge. Discover my journey, interests, and what drives my passion for technology."
-keywords: ["Danial Jafarzadeh", "software developer", "programmer", "tech blogger", "web developer", "about", "developer bio", "tech enthusiast"]
+description: "Learn more about Danial Jafarzadeh, a developer focused on machine learning systems, CUDA, and performance-oriented engineering."
+keywords: ["Danial Jafarzadeh", "machine learning engineer", "systems engineering", "CUDA developer", "AI infrastructure", "about"]
 sitemap:
   priority: 0.9
 ---
 
-## Hey, I'm Danial Jafarzadeh! 👨‍💻
+## Hey, I'm Danial Jafarzadeh
 
-Welcome to my digital space! I'm a developer, learner, and occasional tech tinkerer who believes that the best way to learn is by doing—and then sharing what you've discovered.
+I work at the intersection of machine learning and systems. Most of my time goes into understanding how models behave, how training pipelines fail, and how to make performance-critical code less wasteful.
 
 ## My Journey
 
-My relationship with technology started with curiosity and has evolved into a passion for building things that solve real problems. Whether it's experimenting with new frameworks, diving deep into system architecture, or automating repetitive tasks, I'm always eager to explore and understand how things work under the hood.
+My path into software started with curiosity, but what kept me here was the engineering reality underneath the abstractions. I like the part where ideas meet constraints: memory limits, latency budgets, numerical stability, and code that needs to survive contact with production.
 
 ## What Drives Me
 
-I'm particularly interested in:
+I am particularly interested in:
 
-- **Clean, maintainable code** - Writing software that others (including future me) can actually understand
-- **Problem-solving** - Breaking down complex challenges into manageable pieces
-- **Continuous learning** - The tech landscape never stops evolving, and neither should we
-- **Knowledge sharing** - Documenting solutions so others don't have to reinvent the wheel
+- **Machine learning systems**: training loops, evaluation, reproducibility, and failure modes
+- **CUDA and performance engineering**: kernels, memory movement, and practical optimization
+- **Model intuition**: building mental models for why methods work, not just how to call them
+- **Technical writing**: turning debugging experience into material other engineers can use
 
 ## Why This Blog?
 
-This blog serves multiple purposes:
+This blog exists for a few reasons:
 
-1. **Learning in public** - Writing about topics forces me to truly understand them
-2. **Documentation** - A searchable archive of solutions I've found (my future self thanks me)
-3. **Community** - Connecting with others who are on similar journeys
-4. **Portfolio** - Showcasing projects and technical writing
+1. **Think clearly in public**: writing forces me to close gaps in my own understanding.
+2. **Document hard-won lessons**: especially the ones that only show up after things break.
+3. **Build a durable body of work**: practical posts are more useful than generic hot takes.
+4. **Share implementation detail**: the real work is usually in the edge cases and tradeoffs.
 
-## Beyond the Code
+## What You Will Find Here
 
-When I'm not coding, you might find me:
+- ML tutorials that explain both the mechanics and the tradeoffs
+- Notes on debugging model training and data pipelines
+- Systems-focused posts on performance, tooling, and implementation choices
+- Occasional project writeups when something is worth documenting properly
 
-- Exploring new technologies and tools
-- Reading tech blogs and documentation (yes, really!)
-- Working on side projects that probably won't see the light of day
-- Learning from the amazing developer community online
+## Contact
 
-## Let's Connect
-
-I love connecting with fellow developers, learners, and anyone interested in technology. Whether you have questions, suggestions, or just want to chat about tech:
+If you want to talk about ML engineering, CUDA, or anything I have written here:
 
 - **Email**: [Danialj999@gmail.com](mailto:Danialj999@gmail.com)
 - Check out my [projects](/projects/) to see what I've been building
 - Browse the [blog](/posts/) for tutorials and insights
 
-Thanks for stopping by, and I hope you find something useful here! 🚀
+Thanks for reading.

@@ -1,35 +1,42 @@
 ---
-title: "Danial Jafarzadeh - Resume & Professional Experience"
+title: "Danial Jafarzadeh | Resume"
 date: 2025-08-08
 draft: false
-description: "View Danial Jafarzadeh's professional resume, technical skills, work experience, and qualifications. Explore my background in software development, programming expertise, and career achievements."
-keywords: ["Danial Jafarzadeh resume", "software developer resume", "developer CV", "programming skills", "technical experience", "professional background", "software engineer"]
+description: "Resume overview for Danial Jafarzadeh, focused on machine learning systems, CUDA, and software engineering."
+keywords: ["Danial Jafarzadeh resume", "machine learning engineer resume", "systems engineer CV", "CUDA developer", "software engineer"]
 sitemap:
   priority: 0.6
 ---
 
 ## Resume
 
-This page showcases my professional experience, technical skills, and qualifications as a software developer.
+I am a software engineer focused on machine learning systems, performance-sensitive implementation, and clear technical communication. My work tends to sit between applied ML and the systems concerns that make ML usable in practice.
 
 ## Professional Summary
 
-Software developer passionate about building efficient, scalable solutions and writing clean, maintainable code. Committed to continuous learning and staying current with emerging technologies.
+I care about two things in particular: understanding how a system works end to end, and making the final implementation hold up under real constraints. That usually means careful debugging, reproducible experiments, and code that is optimized only after the behavior is understood.
 
 ## Technical Skills
 
-- **Languages**: [Your programming languages]
-- **Frameworks**: [Your frameworks]
-- **Tools & Technologies**: [Your tools]
-- **Development Practices**: Clean code, version control, testing, documentation
+- **Languages**: Python, C++, CUDA, SQL, Bash
+- **ML and Data**: PyTorch, NumPy, scikit-learn, experiment design, model evaluation
+- **Systems and Tooling**: Git, Linux, profiling, debugging, reproducible workflows
+- **Development Practices**: testing, documentation, benchmarking, code review, performance analysis
 
 ## Experience
 
-*Professional experience and projects will be added here.*
+I am currently building experience through hands-on projects, technical writing, and self-directed systems and ML work. This site is the public record of that process.
+
+Representative strengths:
+
+- turning vague model ideas into runnable experiments
+- debugging training instability and data issues
+- writing technical explanations that stay concrete
+- working comfortably across high-level Python and lower-level performance concerns
 
 ## Education & Certifications
 
-*Educational background and certifications will be listed here.*
+My strongest education has been project-driven: building, measuring, and documenting systems until the theory connects to the implementation. When I add formal education or certifications here, I want them to be specific and verifiable rather than filler.
 
 ---
 

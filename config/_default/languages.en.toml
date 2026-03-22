@@ -11,7 +11,7 @@ title = "Neural Odyssey"
   dateFormat = "2 January 2006"
   logo = "img/candle.png"
   # secondaryLogo = "img/secondary-logo.png"
-  description = "Danial Jafarzadeh's personal blog featuring tech tutorials, development insights, and programming best practices. Follow my journey in software development and technology."
+  description = "Machine learning, CUDA, and systems engineering notes from Danial Jafarzadeh. Practical deep dives into neural networks, model training, and performance-oriented software."
   # copyright = "Copy, _right?_ :thinking_face:"
 
  [params.author]
@@ -19,7 +19,7 @@ title = "Neural Odyssey"
    email = "Danialj999@gmail.com"
    image = "img/vampire.png"
    headline = "Machine Learning & Systems Engineering"
-   bio = "Building at the intersection of ML and high-performance computing. Writing about neural networks, CUDA kernels, and the engineering behind modern AI systems."
+   bio = "I write about machine learning systems, GPU programming, and the implementation details behind modern AI workloads."
    links = [
      { github = "https://github.com/Danialjfz" },
      { email = "mailto:Danialj999@gmail.com" },

@@ -1,9 +1,9 @@
 ---
-title: "Welcome to Neural Odyssey - A Developer's Journey"
+title: "Welcome to Neural Odyssey"
 date: 2025-08-08
 draft: false
-description: "Welcome to Neural Odyssey! Join Danial Jafarzadeh on a journey through software development, programming tutorials, tech insights, and best practices. Discover quality content about web development, coding tips, and technology trends."
-keywords: ["welcome", "developer blog", "programming tutorials", "software development", "tech blog", "coding journey", "Danial Jafarzadeh", "web development"]
+description: "Welcome to Neural Odyssey, a blog about machine learning, systems engineering, CUDA, and the debugging lessons behind real AI work."
+keywords: ["welcome", "machine learning blog", "systems engineering", "CUDA", "AI engineering", "Danial Jafarzadeh"]
 tags: ["welcome", "intro", "blog launch"]
 categories: ["General", "Announcements"]
 sitemap:

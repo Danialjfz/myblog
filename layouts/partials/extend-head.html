@@ -1,104 +1,78 @@
-<!-- Custom SEO enhancements for Danial Jafarzadeh -->
+{{ $author := site.Language.Params.author }}
+{{ $siteDescription := site.Language.Params.description }}
+{{ $siteTitle := site.Title }}
+{{ $personID := printf "%s#person" site.BaseURL }}
 
-<!-- Enhanced meta tags for search engines -->
-<meta name="author" content="Danial Jafarzadeh">
-<meta name="keywords" content="Danial Jafarzadeh, developer blog, programming tutorials, software development, tech insights, coding tips, web development, software engineer">
+<meta name="author" content="{{ $author.name }}">
+<meta name="keywords" content="machine learning, CUDA, systems engineering, neural networks, performance engineering, Danial Jafarzadeh">
+<meta property="og:site_name" content="{{ $siteTitle }}">
+<meta property="og:locale" content="en_US">
 
-<!-- JSON-LD Structured Data for Person & Organization -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
-  "name": "Danial Jafarzadeh",
+  "@id": "{{ $personID }}",
+  "name": "{{ $author.name }}",
   "url": "{{ site.BaseURL }}",
-  "email": "Danialj999@gmail.com",
-  "image": "{{ site.BaseURL }}img/vampire.png",
-  "jobTitle": "Software Developer",
-  "description": "Software developer passionate about writing clean code, sharing knowledge, and exploring new technologies.",
+  "email": "{{ $author.email }}",
+  "image": "{{ "img/vampire.png" | absURL }}",
+  "jobTitle": "Machine Learning and Systems Engineer",
+  "description": "{{ $author.bio }}",
   "sameAs": [
-    "{{ site.BaseURL }}",
-    "{{ site.BaseURL }}about/",
-    "{{ site.BaseURL }}projects/",
-    "{{ site.BaseURL }}resume/"
+    "https://github.com/Danialjfz"
   ],
   "knowsAbout": [
-    "Software Development",
-    "Web Development",
-    "Programming",
-    "Technology",
-    "Code Quality",
-    "Best Practices",
-    "Clean Code",
-    "Software Architecture"
+    "Machine Learning",
+    "Deep Learning",
+    "CUDA",
+    "GPU Programming",
+    "Systems Engineering",
+    "Performance Optimization"
   ],
-  "knowsLanguage": {
-    "@type": "Language",
-    "name": "English"
-  }
+  "knowsLanguage": [
+    {
+      "@type": "Language",
+      "name": "English"
+    }
+  ]
 }
 </script>
 
-<!-- JSON-LD for Website -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "Neural Odyssey",
-  "alternateName": "Danial Jafarzadeh - Personal Blog",
+  "name": "{{ $siteTitle }}",
   "url": "{{ site.BaseURL }}",
-  "description": "A tech blog featuring programming tutorials, software development insights, and best practices from Danial Jafarzadeh.",
+  "description": "{{ $siteDescription }}",
   "inLanguage": "en-US",
   "author": {
     "@type": "Person",
-    "@id": "{{ site.BaseURL }}#person",
-    "name": "Danial Jafarzadeh"
+    "@id": "{{ $personID }}"
   },
   "publisher": {
     "@type": "Person",
-    "@id": "{{ site.BaseURL }}#person",
-    "name": "Danial Jafarzadeh"
-  },
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": {
-      "@type": "EntryPoint",
-      "urlTemplate": "{{ site.BaseURL }}?s={search_term_string}"
-    },
-    "query-input": "required name=search_term_string"
+    "@id": "{{ $personID }}"
   }
 }
 </script>
 
-<!-- JSON-LD for Blog -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Blog",
-  "name": "Neural Odyssey",
-  "url": "{{ site.BaseURL }}posts/",
-  "description": "{{ site.Params.description }}",
+  "name": "{{ $siteTitle }}",
+  "url": "{{ "posts/" | absURL }}",
+  "description": "{{ $siteDescription }}",
+  "inLanguage": "en-US",
   "author": {
     "@type": "Person",
-    "@id": "{{ site.BaseURL }}#person",
-    "name": "Danial Jafarzadeh",
-    "email": "Danialj999@gmail.com"
+    "@id": "{{ $personID }}"
   },
   "publisher": {
     "@type": "Person",
-    "@id": "{{ site.BaseURL }}#person",
-    "name": "Danial Jafarzadeh"
-  },
-  "inLanguage": "en-US",
-  "blogPost": {
-    "@type": "BlogPosting",
-    "headline": "Programming tutorials and development insights",
-    "keywords": "software development, programming, web development, tech tutorials"
+    "@id": "{{ $personID }}"
   }
 }
 </script>
-
-<!-- Open Graph meta tags for better social sharing -->
-<meta property="og:site_name" content="Danial Jafarzadeh - Developer Blog">
-<meta property="og:locale" content="en_US">
-<meta name="twitter:creator" content="@danialjfz">
-
