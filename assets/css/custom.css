@@ -19,8 +19,8 @@
   --text-lead: 1.25rem;
   --text-nav: 1rem;
   --text-h4: 1.125rem;
-  --text-h3: 1.4375rem;
-  --text-h2: 1.875rem;
+  --text-h3: 1.3125rem;
+  --text-h2: 1.75rem;
   --text-card-title: 1.1875rem;
   --leading-tight: 1.2;
   --leading-body: 1.82;
@@ -206,7 +206,7 @@ main > article.prose > section.w-full > *:first-child,
 main > .profile ~ * h1,
 main > article.prose > section.w-full > h1 {
   font-family: var(--font-display);
-  font-size: clamp(2.35rem, 5vw, 4.25rem);
+  font-size: clamp(2.05rem, 4vw, 3.1rem);
   font-weight: 700;
   letter-spacing: -0.04em;
   line-height: 1.02;
@@ -267,7 +267,7 @@ main > article.prose > section.w-full > h2 {
 /* "Recent" section heading */
 main > section > h2 {
   font-family: var(--font-display);
-  font-size: clamp(1.7rem, 3vw, 2.15rem);
+  font-size: clamp(1.5rem, 2.4vw, 1.95rem);
   font-weight: 700;
   margin: 3rem 0 1.5rem;
   text-align: left;
@@ -416,7 +416,7 @@ section.flex.prose {
 /* Article title */
 #single_header h1 {
   font-family: var(--font-display);
-  font-size: clamp(2.55rem, 5vw, 3.5rem);
+  font-size: clamp(2.2rem, 4.2vw, 3rem);
   font-weight: 800;
   line-height: 1.12;
   margin-top: 0;
@@ -780,18 +780,18 @@ pre code {
   }
 
   #single_header h1 {
-    font-size: 2.15rem;
+    font-size: 1.9rem;
   }
 
   .prose h2,
   .article-content h2 {
-    font-size: 1.6rem;
+    font-size: 1.45rem;
     margin-top: 2.25rem;
   }
 
   .prose h3,
   .article-content h3 {
-    font-size: 1.28rem;
+    font-size: 1.16rem;
     margin-top: 1.5rem;
   }
 
@@ -828,7 +828,7 @@ pre code {
   }
 
   #single_header h1 {
-    font-size: 2.7rem;
+    font-size: 2.4rem;
   }
 
   .prose {
