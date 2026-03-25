@@ -8,10 +8,10 @@
 
 :root {
   /* Typography */
-  --font-sans: 'Source Sans 3', 'Avenir Next', 'Segoe UI', 'Helvetica Neue', 'Helvetica', sans-serif;
+  --font-sans: 'Avenir Next', 'Segoe UI', 'Helvetica Neue', 'Helvetica', sans-serif;
   --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
-  --font-serif: 'Charter', 'Source Serif 4', 'Georgia', 'Times New Roman', serif;
-  --font-display: 'Baskerville', 'Libre Baskerville', 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', 'Times New Roman', serif;
+  --font-serif: 'Source Serif 4', 'Baskerville', 'Libre Baskerville', 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', 'Times New Roman', serif;
+  --font-display: 'Canela', 'Noe Display', 'Baskerville', 'Libre Baskerville', 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', 'Times New Roman', serif;
 
   /* Academic monochrome palette - Light mode */
   --color-primary: #161616;
@@ -51,10 +51,10 @@
 
 body {
   position: relative;
-  font-family: var(--font-sans);
-  font-size: 1.08rem;
-  line-height: 1.78;
-  letter-spacing: 0.001em;
+  font-family: var(--font-serif);
+  font-size: 1.14rem;
+  line-height: 1.84;
+  letter-spacing: 0.002em;
   color: var(--color-text);
   background: transparent;
   text-rendering: optimizeLegibility;
@@ -122,8 +122,8 @@ main > section .prose {
 
 .prose {
   max-width: 82ch !important;
-  font-size: 1.08rem !important;
-  line-height: 1.82 !important;
+  font-size: 1.14rem !important;
+  line-height: 1.88 !important;
 }
 
 .dark .prose {
@@ -223,8 +223,8 @@ main > article.prose > section.w-full > h2:first-of-type {
 /* Homepage intro text */
 main > article.prose,
 main .prose:first-of-type {
-  font-size: 1.08rem;
-  line-height: 1.82;
+  font-size: 1.16rem;
+  line-height: 1.9;
   max-width: 78ch !important;
   margin-left: auto;
   margin-right: auto;
@@ -237,8 +237,8 @@ main > article.prose > section.w-full > p:first-of-type,
   max-width: 70ch;
   margin-left: auto;
   margin-right: auto;
-  font-size: 1.12rem;
-  line-height: 1.86;
+  font-size: 1.22rem;
+  line-height: 1.94;
   color: var(--color-text-light);
   text-wrap: balance;
 }
@@ -395,14 +395,14 @@ section.flex.prose {
 /* Article content area */
 .article-content.max-w-prose {
   font-family: var(--font-serif);
-  font-size: 1.1rem;
-  line-height: 1.84;
+  font-size: 1.16rem;
+  line-height: 1.9;
 }
 
 /* Article title */
 #single_header h1 {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 5vw, 3.4rem);
+  font-size: clamp(2.7rem, 5vw, 3.7rem);
   font-weight: 800;
   line-height: 1.12;
   margin-top: 0;
@@ -461,7 +461,7 @@ section.flex.prose {
 .prose p,
 .article-content p {
   margin-bottom: 1.1em;
-  line-height: 1.84;
+  line-height: 1.9;
   text-align: left;
 }
 
@@ -732,7 +732,7 @@ pre code {
 
 @media (max-width: 639px) {
   body {
-    font-size: 1rem;
+    font-size: 1.04rem;
   }
 
   .article-content.max-w-prose,
@@ -754,14 +754,14 @@ pre code {
   }
 
   .article-content.max-w-prose {
-    font-size: 1.02rem;
-    line-height: 1.76;
+    font-size: 1.08rem;
+    line-height: 1.82;
   }
 
   .prose {
     max-width: 100% !important;
-    font-size: 1rem !important;
-    line-height: 1.76 !important;
+    font-size: 1.06rem !important;
+    line-height: 1.82 !important;
   }
 
   #single_header h1 {
@@ -818,7 +818,7 @@ pre code {
 
   .prose {
     max-width: 76ch !important;
-    font-size: 1.04rem !important;
+    font-size: 1.1rem !important;
   }
 }
 
