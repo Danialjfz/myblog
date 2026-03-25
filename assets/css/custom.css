@@ -52,8 +52,8 @@
 body {
   position: relative;
   font-family: var(--font-serif);
-  font-size: 1.14rem;
-  line-height: 1.84;
+  font-size: 1.22rem;
+  line-height: 1.9;
   letter-spacing: 0.002em;
   color: var(--color-text);
   background: transparent;
@@ -122,8 +122,8 @@ main > section .prose {
 
 .prose {
   max-width: 82ch !important;
-  font-size: 1.14rem !important;
-  line-height: 1.88 !important;
+  font-size: 1.24rem !important;
+  line-height: 1.95 !important;
 }
 
 .dark .prose {
@@ -223,8 +223,8 @@ main > article.prose > section.w-full > h2:first-of-type {
 /* Homepage intro text */
 main > article.prose,
 main .prose:first-of-type {
-  font-size: 1.16rem;
-  line-height: 1.9;
+  font-size: 1.24rem;
+  line-height: 1.96;
   max-width: 78ch !important;
   margin-left: auto;
   margin-right: auto;
@@ -237,8 +237,8 @@ main > article.prose > section.w-full > p:first-of-type,
   max-width: 70ch;
   margin-left: auto;
   margin-right: auto;
-  font-size: 1.22rem;
-  line-height: 1.94;
+  font-size: 1.3rem;
+  line-height: 1.98;
   color: var(--color-text-light);
   text-wrap: balance;
 }
@@ -395,8 +395,8 @@ section.flex.prose {
 /* Article content area */
 .article-content.max-w-prose {
   font-family: var(--font-serif);
-  font-size: 1.16rem;
-  line-height: 1.9;
+  font-size: 1.24rem;
+  line-height: 1.96;
 }
 
 /* Article title */
@@ -461,7 +461,7 @@ section.flex.prose {
 .prose p,
 .article-content p {
   margin-bottom: 1.1em;
-  line-height: 1.9;
+  line-height: 1.96;
   text-align: left;
 }
 
@@ -732,7 +732,7 @@ pre code {
 
 @media (max-width: 639px) {
   body {
-    font-size: 1.04rem;
+    font-size: 1.12rem;
   }
 
   .article-content.max-w-prose,
@@ -754,14 +754,14 @@ pre code {
   }
 
   .article-content.max-w-prose {
-    font-size: 1.08rem;
-    line-height: 1.82;
+    font-size: 1.14rem;
+    line-height: 1.9;
   }
 
   .prose {
     max-width: 100% !important;
-    font-size: 1.06rem !important;
-    line-height: 1.82 !important;
+    font-size: 1.12rem !important;
+    line-height: 1.9 !important;
   }
 
   #single_header h1 {
@@ -818,7 +818,7 @@ pre code {
 
   .prose {
     max-width: 76ch !important;
-    font-size: 1.1rem !important;
+    font-size: 1.18rem !important;
   }
 }
 
