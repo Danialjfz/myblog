@@ -12,6 +12,19 @@
   --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
   --font-serif: 'Source Serif 4', 'Baskerville', 'Libre Baskerville', 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', 'Times New Roman', serif;
   --font-display: 'Canela', 'Noe Display', 'Baskerville', 'Libre Baskerville', 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', 'Times New Roman', serif;
+  --text-xs: 0.8125rem;
+  --text-sm: 0.9375rem;
+  --text-base: 1.0625rem;
+  --text-body: 1.125rem;
+  --text-lead: 1.25rem;
+  --text-nav: 1rem;
+  --text-h4: 1.125rem;
+  --text-h3: 1.4375rem;
+  --text-h2: 1.875rem;
+  --text-card-title: 1.1875rem;
+  --leading-tight: 1.2;
+  --leading-body: 1.82;
+  --leading-relaxed: 1.9;
 
   /* Academic monochrome palette - Light mode */
   --color-primary: #161616;
@@ -52,8 +65,8 @@
 body {
   position: relative;
   font-family: var(--font-serif);
-  font-size: 1.14rem;
-  line-height: 1.84;
+  font-size: var(--text-base);
+  line-height: var(--leading-body);
   letter-spacing: 0.002em;
   color: var(--color-text);
   background: transparent;
@@ -122,8 +135,8 @@ main > section .prose {
 
 .prose {
   max-width: 82ch !important;
-  font-size: 1.14rem !important;
-  line-height: 1.88 !important;
+  font-size: var(--text-body) !important;
+  line-height: var(--leading-relaxed) !important;
 }
 
 .dark .prose {
@@ -223,8 +236,8 @@ main > article.prose > section.w-full > h2:first-of-type {
 /* Homepage intro text */
 main > article.prose,
 main .prose:first-of-type {
-  font-size: 1.16rem;
-  line-height: 1.9;
+  font-size: var(--text-body);
+  line-height: var(--leading-relaxed);
   max-width: 78ch !important;
   margin-left: auto;
   margin-right: auto;
@@ -237,8 +250,8 @@ main > article.prose > section.w-full > p:first-of-type,
   max-width: 70ch;
   margin-left: auto;
   margin-right: auto;
-  font-size: 1.22rem;
-  line-height: 1.94;
+  font-size: var(--text-lead);
+  line-height: 1.88;
   color: var(--color-text-light);
   text-wrap: balance;
 }
@@ -254,7 +267,7 @@ main > article.prose > section.w-full > h2 {
 /* "Recent" section heading */
 main > section > h2 {
   font-family: var(--font-display);
-  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-size: clamp(1.7rem, 3vw, 2.15rem);
   font-weight: 700;
   margin: 3rem 0 1.5rem;
   text-align: left;
@@ -294,7 +307,7 @@ main > section .grid .px-6.py-4 {
 
 /* Card title */
 main > section .grid .font-bold.text-xl {
-  font-size: 1.22rem;
+  font-size: var(--text-card-title);
   line-height: 1.35;
   letter-spacing: -0.02em;
 }
@@ -302,7 +315,7 @@ main > section .grid .font-bold.text-xl {
 /* "Show More" button */
 main > section button {
   padding: 0.75rem 1.4rem;
-  font-size: 0.95rem;
+  font-size: var(--text-sm);
   border-radius: 999px;
   transition: all 0.2s ease;
 }
@@ -346,6 +359,7 @@ main > section a.article:hover {
 .main-menu nav a,
 .main-menu button {
   font-family: var(--font-sans);
+  font-size: var(--text-nav);
   letter-spacing: 0.02em;
   color: var(--color-text-light) !important;
 }
@@ -395,14 +409,14 @@ section.flex.prose {
 /* Article content area */
 .article-content.max-w-prose {
   font-family: var(--font-serif);
-  font-size: 1.16rem;
-  line-height: 1.9;
+  font-size: var(--text-body);
+  line-height: var(--leading-relaxed);
 }
 
 /* Article title */
 #single_header h1 {
   font-family: var(--font-display);
-  font-size: clamp(2.7rem, 5vw, 3.7rem);
+  font-size: clamp(2.55rem, 5vw, 3.5rem);
   font-weight: 800;
   line-height: 1.12;
   margin-top: 0;
@@ -420,7 +434,7 @@ section.flex.prose {
    ======================================================================== */
 
 .toc {
-  font-size: 0.8125rem;
+  font-size: var(--text-xs);
 }
 
 #TOCView {
@@ -460,15 +474,15 @@ section.flex.prose {
 
 .prose p,
 .article-content p {
-  font-size: 1.08em;
+  font-size: 1em;
   margin-bottom: 1.1em;
-  line-height: 1.9;
+  line-height: var(--leading-relaxed);
   text-align: left;
 }
 
 .prose li,
 .article-content li {
-  font-size: 1.06em;
+  font-size: 1em;
 }
 
 /* ========================================================================
@@ -478,9 +492,9 @@ section.flex.prose {
 .prose h2,
 .article-content h2 {
   font-family: var(--font-display);
-  font-size: 1.95rem;
+  font-size: var(--text-h2);
   font-weight: 700;
-  line-height: 1.2;
+  line-height: var(--leading-tight);
   margin-top: 3rem;
   margin-bottom: 1rem;
   padding-bottom: 0.65rem;
@@ -491,7 +505,7 @@ section.flex.prose {
 .prose h3,
 .article-content h3 {
   font-family: var(--font-display);
-  font-size: 1.55rem;
+  font-size: var(--text-h3);
   font-weight: 600;
   line-height: 1.4;
   margin-top: 2.25rem;
@@ -501,7 +515,7 @@ section.flex.prose {
 .prose h4,
 .article-content h4 {
   font-family: var(--font-sans);
-  font-size: 1.0625rem;
+  font-size: var(--text-h4);
   font-weight: 600;
   line-height: 1.5;
   margin-top: 1.75rem;
@@ -639,7 +653,7 @@ pre code {
   width: 100%;
   border-collapse: collapse;
   margin: 2rem 0;
-  font-size: 0.9375rem;
+  font-size: var(--text-sm);
   overflow: hidden;
   border: 1px solid rgba(148, 163, 184, 0.18);
   border-radius: 1rem;
@@ -672,7 +686,7 @@ pre code {
 
 .article-meta,
 .post-meta {
-  font-size: 0.9375rem;
+  font-size: var(--text-sm);
   color: var(--color-text-light);
   margin: 1rem 0 2rem 0;
   padding: 1rem 1.5rem;
@@ -693,7 +707,7 @@ pre code {
 /* Make the inline tag badges slightly more padded and readable */
 .rounded-md.border.border-primary-400 {
   padding: 0.125rem 0.5rem;
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
   border-radius: 9999px;
 }
 
@@ -733,7 +747,7 @@ pre code {
 
 @media (max-width: 639px) {
   body {
-    font-size: 1.04rem;
+    font-size: 1rem;
   }
 
   .article-content.max-w-prose,
@@ -755,39 +769,29 @@ pre code {
   }
 
   .article-content.max-w-prose {
-    font-size: 1.08rem;
+    font-size: 1.06rem;
     line-height: 1.82;
   }
 
   .prose {
     max-width: 100% !important;
-    font-size: 1.06rem !important;
+    font-size: 1.05rem !important;
     line-height: 1.82 !important;
   }
 
-  .prose p,
-  .article-content p {
-    font-size: 1.06em;
-  }
-
-  .prose li,
-  .article-content li {
-    font-size: 1.04em;
-  }
-
   #single_header h1 {
-    font-size: 2rem;
+    font-size: 2.15rem;
   }
 
   .prose h2,
   .article-content h2 {
-    font-size: 1.45rem;
+    font-size: 1.6rem;
     margin-top: 2.25rem;
   }
 
   .prose h3,
   .article-content h3 {
-    font-size: 1.22rem;
+    font-size: 1.28rem;
     margin-top: 1.5rem;
   }
 
@@ -803,7 +807,7 @@ pre code {
   }
 
   main > section .font-bold.text-xl {
-    font-size: 1.125rem;
+    font-size: 1.1rem;
   }
 
   main > section > h2 {
@@ -824,12 +828,12 @@ pre code {
   }
 
   #single_header h1 {
-    font-size: 2.4rem;
+    font-size: 2.7rem;
   }
 
   .prose {
     max-width: 76ch !important;
-    font-size: 1.1rem !important;
+    font-size: 1.08rem !important;
   }
 }
 
