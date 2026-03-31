@@ -1,4 +1,4 @@
-{{ $repoColors := site.Data.repoColors }}
+{{ $repoColors := hugo.Data.repoColors }}
 {{ $classNameMap := dict }}
 {{ range $language, $unused := $repoColors }}
   {{ $className := printf "background-color-%s" (md5 $language) }}
