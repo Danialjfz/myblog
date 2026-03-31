@@ -33,18 +33,24 @@
       {{ end }}
 
       {{ if .Site.Params.footer.showAppearanceSwitcher | default false }}
-        <button
-          id="appearance-switcher"
-          aria-label="Toggle light and dark theme"
-          type="button"
-          title="Toggle theme"
-          class="publication-header__theme-toggle">
-          <span class="publication-header__theme-track" aria-hidden="true">
-            <span class="publication-header__theme-option publication-header__theme-option--light">Light</span>
-            <span class="publication-header__theme-option publication-header__theme-option--dark">Dark</span>
-            <span class="publication-header__theme-knob"></span>
-          </span>
-        </button>
+        <div class="publication-header__theme-switcher" aria-label="Theme switcher" role="group">
+          <button
+            id="appearance-switcher-light"
+            aria-label="Switch to light theme"
+            type="button"
+            title="Light theme"
+            class="publication-header__theme-button publication-header__theme-button--light">
+            {{ partial "icon.html" "sun" }}
+          </button>
+          <button
+            id="appearance-switcher-dark"
+            aria-label="Switch to dark theme"
+            type="button"
+            title="Dark theme"
+            class="publication-header__theme-button publication-header__theme-button--dark">
+            {{ partial "icon.html" "moon" }}
+          </button>
+        </div>
       {{ end }}
     </div>
 
@@ -60,18 +66,24 @@
       {{ end }}
 
       {{ if .Site.Params.footer.showAppearanceSwitcher | default false }}
-        <button
-          id="appearance-switcher-mobile"
-          aria-label="Toggle light and dark theme"
-          type="button"
-          title="Toggle theme"
-          class="publication-header__theme-toggle publication-header__theme-toggle--mobile">
-          <span class="publication-header__theme-track" aria-hidden="true">
-            <span class="publication-header__theme-option publication-header__theme-option--light">Light</span>
-            <span class="publication-header__theme-option publication-header__theme-option--dark">Dark</span>
-            <span class="publication-header__theme-knob"></span>
-          </span>
-        </button>
+        <div class="publication-header__theme-switcher publication-header__theme-switcher--mobile" aria-label="Theme switcher" role="group">
+          <button
+            id="appearance-switcher-light-mobile"
+            aria-label="Switch to light theme"
+            type="button"
+            title="Light theme"
+            class="publication-header__theme-button publication-header__theme-button--light">
+            {{ partial "icon.html" "sun" }}
+          </button>
+          <button
+            id="appearance-switcher-dark-mobile"
+            aria-label="Switch to dark theme"
+            type="button"
+            title="Dark theme"
+            class="publication-header__theme-button publication-header__theme-button--dark">
+            {{ partial "icon.html" "moon" }}
+          </button>
+        </div>
       {{ end }}
 
       {{ if .Site.Menus.main }}
@@ -122,6 +134,52 @@
 
       var menuToggle = document.getElementById("publication-menu-toggle");
       var menuPanel = document.getElementById("publication-menu-panel");
+      var lightButtons = document.querySelectorAll('#appearance-switcher-light, #appearance-switcher-light-mobile');
+      var darkButtons = document.querySelectorAll('#appearance-switcher-dark, #appearance-switcher-dark-mobile');
+
+      var updateThemeButtons = function () {
+        var isDark = document.documentElement.classList.contains("dark");
+
+        lightButtons.forEach(function (button) {
+          button.classList.toggle("is-active", !isDark);
+          button.setAttribute("aria-pressed", !isDark ? "true" : "false");
+        });
+
+        darkButtons.forEach(function (button) {
+          button.classList.toggle("is-active", isDark);
+          button.setAttribute("aria-pressed", isDark ? "true" : "false");
+        });
+      };
+
+      var updateThemeMeta = function () {
+        var meta = document.querySelector('meta[name="theme-color"]');
+        var body = document.querySelector("body");
+
+        if (meta && body) {
+          meta.setAttribute("content", getComputedStyle(body).backgroundColor);
+        }
+      };
+
+      var setAppearance = function (appearance) {
+        document.documentElement.classList.toggle("dark", appearance === "dark");
+        localStorage.setItem("appearance", appearance);
+        updateThemeButtons();
+        updateThemeMeta();
+      };
+
+      lightButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          setAppearance("light");
+        });
+      });
+
+      darkButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          setAppearance("dark");
+        });
+      });
+
+      updateThemeButtons();
 
       if (!menuToggle || !menuPanel) {
         return;
