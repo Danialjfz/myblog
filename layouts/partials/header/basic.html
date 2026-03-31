@@ -8,7 +8,7 @@
       </a>
     </div>
 
-    <nav class="publication-header__nav hidden lg:flex" aria-label="Primary">
+    <nav class="publication-header__nav" aria-label="Primary">
       {{ if .Site.Menus.main }}
         {{ range .Site.Menus.main }}
           <a
@@ -21,7 +21,7 @@
       {{ end }}
     </nav>
 
-    <div class="publication-header__utilities hidden lg:flex">
+    <div class="publication-header__utilities">
       {{ if .Site.Params.enableSearch | default false }}
         <button
           id="search-button"
@@ -54,7 +54,7 @@
       {{ end }}
     </div>
 
-    <div class="publication-header__mobile flex lg:hidden">
+    <div class="publication-header__mobile">
       {{ if .Site.Params.enableSearch | default false }}
         <button
           id="search-button-mobile"

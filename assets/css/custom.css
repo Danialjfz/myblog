@@ -392,6 +392,15 @@ main > article.prose > section.w-full,
   gap: 0.6rem;
 }
 
+.publication-header__nav,
+.publication-header__utilities {
+  display: none;
+}
+
+.publication-header__mobile {
+  display: flex;
+}
+
 .publication-header__icon-button {
   display: inline-flex;
   align-items: center;
@@ -1304,6 +1313,17 @@ main > article.prose > section.w-full,
   .dark .review-home__feature {
     border-top-color: rgba(245, 245, 244, 0.14);
     border-bottom-color: rgba(245, 245, 244, 0.14);
+  }
+}
+
+@media (min-width: 1024px) {
+  .publication-header__nav,
+  .publication-header__utilities {
+    display: flex;
+  }
+
+  .publication-header__mobile {
+    display: none;
   }
 }
 
