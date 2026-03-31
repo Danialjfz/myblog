@@ -1210,6 +1210,13 @@ main > article.prose > section.w-full,
   margin-bottom: 2.75rem;
 }
 
+.review-home__footer-action {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 1.4rem;
+  border-top: 1px solid rgba(15, 23, 32, 0.14);
+}
+
 .review-home__section-head {
   display: flex;
   align-items: end;
@@ -1274,7 +1281,8 @@ main > article.prose > section.w-full,
 .dark .review-home__archive-list,
 .dark .review-home__archive-item,
 .dark .review-home__selected-item,
-.dark .review-home__aside {
+.dark .review-home__aside,
+.dark .review-home__footer-action {
   border-color: rgba(245, 245, 244, 0.14);
 }
 
