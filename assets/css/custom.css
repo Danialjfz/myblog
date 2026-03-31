@@ -387,7 +387,6 @@ main > article.prose > section.w-full,
 
 .publication-header__utilities,
 .publication-header__mobile {
-  display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 0.6rem;
