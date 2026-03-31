@@ -1,9 +1,27 @@
 {{/* Publication-style header */}}
 <header class="publication-header">
-  <div class="publication-header__meta-row hidden md:flex">
-    <span class="publication-header__eyebrow">Journal of Machine Learning and Systems</span>
+  <div class="publication-header__row">
+    <div class="publication-header__brand">
+      <a href="{{ "" | relLangURL }}" class="publication-header__brand-link">
+        <span class="publication-header__site-title">{{ .Site.Title | markdownify }}</span>
+        <span class="publication-header__site-subtitle">Machine learning, CUDA, and systems engineering</span>
+      </a>
+    </div>
 
-    <div class="publication-header__utilities">
+    <nav class="publication-header__nav hidden lg:flex" aria-label="Primary">
+      {{ if .Site.Menus.main }}
+        {{ range .Site.Menus.main }}
+          <a
+            href="{{ .URL }}"
+            {{ if or (strings.HasPrefix .URL "http:" ) (strings.HasPrefix .URL "https:" ) }}target="_blank"{{ end }}
+            class="publication-header__nav-link">
+            <span title="{{ .Title }}">{{ .Name | markdownify }}</span>
+          </a>
+        {{ end }}
+      {{ end }}
+    </nav>
+
+    <div class="publication-header__utilities hidden lg:flex">
       {{ if .Site.Params.enableSearch | default false }}
         <button
           id="search-button"
@@ -29,17 +47,8 @@
         </button>
       {{ end }}
     </div>
-  </div>
 
-  <div class="publication-header__main-row">
-    <div class="publication-header__brand">
-      <a href="{{ "" | relLangURL }}" class="publication-header__brand-link">
-        <span class="publication-header__site-title">{{ .Site.Title | markdownify }}</span>
-        <span class="publication-header__site-subtitle">Machine learning, CUDA, and systems engineering notes</span>
-      </a>
-    </div>
-
-    <div class="publication-header__mobile md:hidden">
+    <div class="publication-header__mobile flex lg:hidden">
       {{ if .Site.Params.enableSearch | default false }}
         <button
           id="search-button-mobile"
@@ -66,59 +75,98 @@
       {{ end }}
 
       {{ if .Site.Menus.main }}
-        <div id="menu-button" class="publication-header__menu-button">
-          <div class="cursor-pointer">
+        <div class="publication-header__menu">
+          <button
+            id="publication-menu-toggle"
+            type="button"
+            aria-label="Open navigation"
+            aria-expanded="false"
+            aria-controls="publication-menu-panel"
+            class="publication-header__menu-toggle">
             {{ partial "icon.html" "bars" }}
-          </div>
-          <div
-            id="menu-wrapper"
-            class="publication-mobile-menu fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default">
-            <ul class="publication-mobile-menu__list">
-              <li id="menu-close-button" class="publication-mobile-menu__close">
-                <span class="cursor-pointer inline-block align-text-bottom">
-                  {{ partial "icon.html" "xmark" }}
-                </span>
-              </li>
+          </button>
 
-              {{ range .Site.Menus.main }}
-                <li class="publication-mobile-menu__item">
+          <div id="publication-menu-panel" class="publication-mobile-menu" hidden>
+            <div class="publication-mobile-menu__panel">
+              <p class="publication-mobile-menu__eyebrow">Browse the Journal</p>
+              <nav class="publication-mobile-menu__nav" aria-label="Mobile">
+                {{ range .Site.Menus.main }}
                   <a
                     href="{{ .URL }}"
                     {{ if or (strings.HasPrefix .URL "http:" ) (strings.HasPrefix .URL "https:" ) }}target="_blank"{{ end }}
                     class="publication-mobile-menu__link">
-                    <p title="{{ .Title }}">{{ .Name | markdownify }}</p>
+                    <span title="{{ .Title }}">{{ .Name | markdownify }}</span>
                   </a>
-                </li>
-              {{ end }}
-            </ul>
+                {{ end }}
+              </nav>
+            </div>
           </div>
         </div>
       {{ end }}
     </div>
   </div>
-
-  <nav class="publication-header__nav hidden md:flex" aria-label="Primary">
-    {{ if .Site.Menus.main }}
-      {{ range .Site.Menus.main }}
-        <a
-          href="{{ .URL }}"
-          {{ if or (strings.HasPrefix .URL "http:" ) (strings.HasPrefix .URL "https:" ) }}target="_blank"{{ end }}
-          class="publication-header__nav-link">
-          <p title="{{ .Title }}">{{ .Name | markdownify }}</p>
-        </a>
-      {{ end }}
-    {{ end }}
-  </nav>
 </header>
 
 {{ if .Site.Params.highlightCurrentMenuArea }}
   <script>
     (function () {
-      var $mainmenu = $(".publication-header");
       var path = window.location.pathname;
-      $mainmenu.find('a[href="' + path + '"]').each(function (i, e) {
-        $(e).addClass("active");
-        $(e).children("p").addClass("active");
+
+      document.querySelectorAll('.publication-header a[href="' + path + '"]').forEach(function (link) {
+        link.classList.add("active");
+        var label = link.querySelector("span");
+        if (label) {
+          label.classList.add("active");
+        }
+      });
+
+      var menuToggle = document.getElementById("publication-menu-toggle");
+      var menuPanel = document.getElementById("publication-menu-panel");
+
+      if (!menuToggle || !menuPanel) {
+        return;
+      }
+
+      var closeMenu = function () {
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.classList.remove("is-open");
+        menuPanel.hidden = true;
+      };
+
+      var openMenu = function () {
+        menuToggle.setAttribute("aria-expanded", "true");
+        menuToggle.classList.add("is-open");
+        menuPanel.hidden = false;
+      };
+
+      menuToggle.addEventListener("click", function (event) {
+        event.stopPropagation();
+
+        if (menuPanel.hidden) {
+          openMenu();
+        } else {
+          closeMenu();
+        }
+      });
+
+      menuPanel.addEventListener("click", function (event) {
+        event.stopPropagation();
+      });
+
+      document.addEventListener("click", function (event) {
+        if (!menuPanel.hidden && !menuToggle.contains(event.target)) {
+          closeMenu();
+        }
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          closeMenu();
+        }
+      });
+
+      menuPanel.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", closeMenu);
       });
     })();
   </script>
