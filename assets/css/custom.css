@@ -64,7 +64,7 @@
 
 body {
   position: relative;
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: var(--text-base);
   font-weight: 500;
   line-height: var(--leading-body);
@@ -476,7 +476,7 @@ section.flex.prose {
 
 /* Article content area */
 .article-content.max-w-prose {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: var(--text-body);
   line-height: var(--leading-relaxed);
 }
