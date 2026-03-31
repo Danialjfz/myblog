@@ -9,29 +9,6 @@ sitemap:
   changefreq: weekly
 ---
 
-This archive is the main index for the blog: practical writing on machine learning, systems work, and the engineering habits that make technical work hold up under real constraints.
+This page collects the blog's tutorials, implementation notes, and debugging lessons on machine learning, systems work, and engineering tradeoffs.
 
-## What You Will Find Here
-
-- **ML intuition**: posts that explain why methods work before jumping straight into APIs and formulas
-- **Implementation tutorials**: practical walkthroughs for building and evaluating models
-- **Debugging lessons**: the mistakes, false starts, and checks that save time later
-- **Systems-minded notes**: writing that pays attention to performance, tooling, and engineering tradeoffs
-
-## Suggested Starting Points
-
-If you are new to the site, these are the best places to start:
-
-- Read [Neural Networks: Building Intuition Beyond the Math](/posts/neural-networks-intuition/) for a conceptual entry point
-- Read [Build Your First ML Model: A No-BS Guide](/posts/build-your-first-ml-model/) for an end-to-end practical walkthrough
-- Read [5 ML Mistakes I Made So You Don't Have To](/posts/ml-mistakes-to-avoid/) for the debugging and evaluation side of the work
-
-## How To Use This Archive
-
-The posts below are ordered by date, but the better way to read the site is by interest:
-
-- Start with intuition if you want the concepts to click first
-- Start with tutorials if you want code and workflow
-- Start with debugging posts if you want to avoid common failure modes
-
-Everything below is part of the same thread: learning in public, but with enough care that the writing stays useful after the first read.
+If you are new here, start with one of the guided paths below. If you already know what you want, use the archive to browse everything by date.

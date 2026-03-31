@@ -1,0 +1,121 @@
+{{ define "main" }}
+  {{ $posts := sort .Pages "Date" "desc" }}
+  {{ $pathways := slice
+    (dict
+      "label" "Start with intuition"
+      "description" "For readers who want the concepts to click before getting lost in notation."
+      "page" (.Site.GetPage "/posts/neural-networks-intuition"))
+    (dict
+      "label" "Build something practical"
+      "description" "For readers who want an end-to-end ML workflow with concrete code and decisions."
+      "page" (.Site.GetPage "/posts/build-your-first-ml-model"))
+    (dict
+      "label" "Avoid common mistakes"
+      "description" "For readers who want the debugging and evaluation pitfalls up front."
+      "page" (.Site.GetPage "/posts/ml-mistakes-to-avoid"))
+  }}
+  {{ $topicGroups := slice
+    (dict
+      "title" "Foundations"
+      "description" "Posts that build intuition and explain how the core ideas fit together."
+      "pages" (slice
+        (.Site.GetPage "/posts/neural-networks-intuition")
+        (.Site.GetPage "/posts/welcome")))
+    (dict
+      "title" "Implementation"
+      "description" "Walkthroughs that focus on workflow, setup, and turning an idea into code."
+      "pages" (slice
+        (.Site.GetPage "/posts/build-your-first-ml-model")))
+    (dict
+      "title" "Debugging"
+      "description" "Posts focused on evaluation mistakes, failure modes, and what breaks in practice."
+      "pages" (slice
+        (.Site.GetPage "/posts/ml-mistakes-to-avoid")))
+  }}
+
+  <article class="writing-index">
+    <header class="writing-index__header">
+      <p class="writing-index__eyebrow">Writing</p>
+      <h1 class="writing-index__title">{{ .Title }}</h1>
+      <div class="writing-index__intro">
+        {{ .Content }}
+      </div>
+    </header>
+
+    <section class="writing-index__paths">
+      <div class="writing-index__section-head">
+        <div>
+          <p class="writing-index__eyebrow">Read In Order</p>
+          <h2 class="writing-index__section-title">Choose a good entry point</h2>
+        </div>
+      </div>
+
+      <div class="writing-index__path-grid">
+        {{ range $path := $pathways }}
+          {{ with $path.page }}
+            <article class="writing-index__path-card">
+              <p class="writing-index__path-label">{{ $path.label }}</p>
+              <h3 class="writing-index__path-title">
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+              </h3>
+              <p class="writing-index__path-copy">{{ $path.description }}</p>
+              <p class="writing-index__path-meta">{{ .Date.Format "January 2, 2006" }}</p>
+            </article>
+          {{ end }}
+        {{ end }}
+      </div>
+    </section>
+
+    <section class="writing-index__topics">
+      <div class="writing-index__section-head">
+        <div>
+          <p class="writing-index__eyebrow">Browse By Focus</p>
+          <h2 class="writing-index__section-title">Follow the path that matches your interest</h2>
+        </div>
+      </div>
+
+      <div class="writing-index__topic-grid">
+        {{ range $topicGroups }}
+          <section class="writing-index__topic-card">
+            <h3 class="writing-index__topic-title">{{ .title }}</h3>
+            <p class="writing-index__topic-copy">{{ .description }}</p>
+            <ul class="writing-index__topic-list">
+              {{ range .pages }}
+                {{ with . }}
+                  <li class="writing-index__topic-item">
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                  </li>
+                {{ end }}
+              {{ end }}
+            </ul>
+          </section>
+        {{ end }}
+      </div>
+    </section>
+
+    <section class="writing-index__archive">
+      <div class="writing-index__section-head">
+        <div>
+          <p class="writing-index__eyebrow">Archive</p>
+          <h2 class="writing-index__section-title">All posts in chronological order</h2>
+        </div>
+      </div>
+
+      <div class="writing-index__archive-list">
+        {{ range $posts }}
+          <article class="writing-index__archive-item">
+            <div>
+              <p class="writing-index__archive-date">{{ .Date.Format "Jan 2, 2006" }}</p>
+              <h3 class="writing-index__archive-title">
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+              </h3>
+            </div>
+            <p class="writing-index__archive-summary">
+              {{ .Description | default (.Summary | plainify) }}
+            </p>
+          </article>
+        {{ end }}
+      </div>
+    </section>
+  </article>
+{{ end }}
