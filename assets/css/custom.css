@@ -31,7 +31,7 @@
   --color-primary-hover: #000000;
   --color-secondary: #0f1720;
   --color-accent: #2f3a46;
-  --color-text: #161311;
+  --color-text: #14110f;
   --color-text-light: #3f3a36;
   --color-background: #f7f5f2;
   --color-surface: #fcfbf8;
@@ -48,7 +48,7 @@
   --color-primary-hover: #e7e5e4;
   --color-secondary: #fafaf9;
   --color-accent: #d6d3d1;
-  --color-text: #f2efe9;
+  --color-text: #faf7f1;
   --color-text-light: #b7b0a6;
   --color-background: #111111;
   --color-surface: #1b1b1b;
@@ -112,6 +112,17 @@ html:not(.dark) .prose blockquote,
 html:not(.dark) .article-meta,
 html:not(.dark) .post-meta,
 html:not(.dark) #single_header .text-base.text-neutral-500 {
+  color: var(--color-text) !important;
+}
+
+html.dark .prose p,
+html.dark .prose li,
+html.dark .article-content p,
+html.dark .article-content li,
+html.dark .prose blockquote,
+html.dark .article-meta,
+html.dark .post-meta,
+html.dark #single_header .text-base.text-neutral-500 {
   color: var(--color-text) !important;
 }
 
