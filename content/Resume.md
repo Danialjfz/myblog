@@ -10,11 +10,18 @@ sitemap:
 
 ## Resume
 
-I am a software engineer focused on machine learning systems, performance-sensitive implementation, and clear technical communication. My work tends to sit between applied ML and the systems concerns that make ML usable in practice.
+I am a software engineer focused on machine learning systems, performance-sensitive implementation, and technical writing. My work sits at the point where models, tooling, and engineering constraints meet.
 
-## Professional Summary
+## Profile
 
-I care about two things in particular: understanding how a system works end to end, and making the final implementation hold up under real constraints. That usually means careful debugging, reproducible experiments, and code that is optimized only after the behavior is understood.
+I am most interested in work that requires both technical depth and engineering discipline: understanding model behavior, debugging failure modes, improving runtime performance, and explaining complex systems clearly. I tend to work from first principles, prioritize reproducibility, and prefer implementation that is measurable rather than performative.
+
+## Areas of Focus
+
+- **Machine learning systems**: model training, evaluation, debugging, and reproducible experimentation
+- **Performance-oriented engineering**: practical optimization, profiling, and reasoning about bottlenecks
+- **CUDA and low-level ML infrastructure**: learning the systems side of modern AI workloads
+- **Technical communication**: writing tutorials and implementation notes that stay concrete
 
 ## Technical Skills
 
@@ -23,20 +30,27 @@ I care about two things in particular: understanding how a system works end to e
 - **Systems and Tooling**: Git, Linux, profiling, debugging, reproducible workflows
 - **Development Practices**: testing, documentation, benchmarking, code review, performance analysis
 
-## Experience
+## Current Work
 
-I am currently building experience through hands-on projects, technical writing, and self-directed systems and ML work. This site is the public record of that process.
+I am currently building a body of work through technical writing, hands-on ML implementation, and systems-focused experiments. This site serves as a public record of that work: tutorials, engineering notes, and project writeups that show how I think through problems and how I implement solutions.
 
-Representative strengths:
+Representative strengths include:
 
-- turning vague model ideas into runnable experiments
-- debugging training instability and data issues
-- writing technical explanations that stay concrete
-- working comfortably across high-level Python and lower-level performance concerns
+- turning broad ideas into runnable experiments and clear implementation steps
+- debugging training instability, data problems, and evaluation mistakes
+- writing technical explanations that connect intuition to code
+- working across high-level ML workflows and lower-level performance concerns
 
-## Education & Certifications
+## Selected Strengths
 
-My strongest education has been project-driven: building, measuring, and documenting systems until the theory connects to the implementation. When I add formal education or certifications here, I want them to be specific and verifiable rather than filler.
+- Clear written communication for technical audiences
+- Strong bias toward measurement, reproducibility, and debugging
+- Comfort working across modeling, tooling, and systems details
+- Consistent focus on practical engineering rather than surface-level demos
+
+## Education
+
+My strongest training so far has been project-driven: building, measuring, and documenting systems until the theory connects to the implementation. I prefer to present only concrete, verifiable credentials here rather than filler.
 
 ---
 
