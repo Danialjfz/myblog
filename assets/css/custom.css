@@ -74,6 +74,42 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+html:not(.dark) body,
+html:not(.dark) .prose,
+html:not(.dark) .article-content,
+html:not(.dark) #single_header,
+html:not(.dark) .text-neutral-500,
+html:not(.dark) .text-neutral-400,
+html:not(.dark) .text-neutral-700 {
+  color: var(--color-text) !important;
+}
+
+html:not(.dark) .prose p,
+html:not(.dark) .prose li,
+html:not(.dark) .article-content p,
+html:not(.dark) .article-content li,
+html:not(.dark) .prose blockquote,
+html:not(.dark) .article-meta,
+html:not(.dark) .post-meta,
+html:not(.dark) #single_header .text-base.text-neutral-500 {
+  color: var(--color-text) !important;
+}
+
+html:not(.dark) .prose h1,
+html:not(.dark) .prose h2,
+html:not(.dark) .prose h3,
+html:not(.dark) .prose h4,
+html:not(.dark) #single_header h1,
+html:not(.dark) main > article.prose > section.w-full > h1,
+html:not(.dark) main > section > h2 {
+  color: var(--color-secondary) !important;
+}
+
+html:not(.dark) .prose a,
+html:not(.dark) .article-content a {
+  color: var(--color-accent) !important;
+}
+
 html {
   min-height: 100%;
   background:
