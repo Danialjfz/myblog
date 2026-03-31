@@ -15,8 +15,8 @@
   --text-xs: 0.8125rem;
   --text-sm: 0.9375rem;
   --text-base: 1.0625rem;
-  --text-body: 1.125rem;
-  --text-lead: 1.25rem;
+  --text-body: 1.1875rem;
+  --text-lead: 1.3125rem;
   --text-nav: 1rem;
   --text-h4: 1.125rem;
   --text-h3: 1.3125rem;
@@ -182,17 +182,17 @@ html.dark {
 
 /* Article body text — comfortable reading width */
 .article-content.max-w-prose {
-  max-width: 84ch !important;
+  max-width: 76ch !important;
 }
 
 /* Article header should match */
 #single_header.max-w-prose {
-  max-width: 84ch !important;
+  max-width: 76ch !important;
 }
 
 /* Article footer */
 footer.max-w-prose {
-  max-width: 84ch !important;
+  max-width: 76ch !important;
 }
 
 /* Homepage & list page prose — let it breathe */
@@ -202,7 +202,7 @@ main > section .prose {
 }
 
 .prose {
-  max-width: 82ch !important;
+  max-width: 74ch !important;
   font-size: var(--text-body) !important;
   line-height: var(--leading-relaxed) !important;
 }
@@ -306,7 +306,7 @@ main > article.prose,
 main .prose:first-of-type {
   font-size: var(--text-body);
   line-height: var(--leading-relaxed);
-  max-width: 78ch !important;
+  max-width: 72ch !important;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1rem;
@@ -894,7 +894,7 @@ pre code {
   .article-content.max-w-prose,
   #single_header.max-w-prose,
   footer.max-w-prose {
-    max-width: 78ch !important;
+    max-width: 72ch !important;
   }
 
   #single_header h1 {
@@ -902,7 +902,7 @@ pre code {
   }
 
   .prose {
-    max-width: 76ch !important;
+    max-width: 70ch !important;
     font-size: 1.08rem !important;
   }
 }
