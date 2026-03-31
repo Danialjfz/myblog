@@ -268,9 +268,10 @@ main > article.prose > section.w-full,
   z-index: 40;
   margin: 0 0 1.35rem;
   padding: 0.55rem 0;
-  border-top: 1px solid rgba(15, 23, 32, 0.14);
-  border-bottom: 1px solid rgba(15, 23, 32, 0.14);
-  background: rgba(247, 245, 242, 0.92);
+  border-top: 1px solid rgba(15, 23, 32, 0.18);
+  border-bottom: 1px solid rgba(15, 23, 32, 0.18);
+  background: rgba(252, 251, 248, 0.98);
+  box-shadow: 0 10px 24px rgba(15, 23, 32, 0.06);
   backdrop-filter: blur(12px);
 }
 
@@ -326,7 +327,7 @@ main > article.prose > section.w-full,
 .publication-header__menu-toggle,
 .publication-mobile-menu__link,
 .publication-mobile-menu__link:visited {
-  color: var(--color-text-light);
+  color: rgba(20, 17, 15, 0.74);
   text-decoration: none;
   transition: color 160ms ease, border-color 160ms ease, background-color 160ms ease;
 }
@@ -393,9 +394,9 @@ main > article.prose > section.w-full,
   justify-content: center;
   width: 2.2rem;
   height: 2.2rem;
-  border: 1px solid rgba(15, 23, 32, 0.12);
+  border: 1px solid rgba(15, 23, 32, 0.18);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.58);
+  background: rgba(255, 255, 255, 0.86);
 }
 
 .publication-header__theme-toggle {
@@ -418,8 +419,8 @@ main > article.prose > section.w-full,
   padding: 0.18rem;
   border: 1px solid rgba(15, 23, 32, 0.2);
   border-radius: 999px;
-  background: rgba(15, 23, 32, 0.07);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.38);
+  background: rgba(15, 23, 32, 0.08);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .publication-header__theme-option {
@@ -434,7 +435,7 @@ main > article.prose > section.w-full,
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(20, 17, 15, 0.58);
+  color: rgba(20, 17, 15, 0.65);
   transition: color 160ms ease;
 }
 
@@ -444,10 +445,10 @@ main > article.prose > section.w-full,
   left: 0.18rem;
   width: calc(50% - 0.18rem);
   height: calc(100% - 0.36rem);
-  border: 1px solid rgba(15, 23, 32, 0.14);
+  border: 1px solid rgba(15, 23, 32, 0.18);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.98);
-  box-shadow: 0 8px 16px rgba(15, 23, 32, 0.12);
+  background: rgba(15, 23, 32, 0.92);
+  box-shadow: 0 8px 16px rgba(15, 23, 32, 0.18);
   transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease;
 }
 
@@ -466,19 +467,23 @@ main > article.prose > section.w-full,
 }
 
 .publication-header__theme-option--light {
-  color: var(--color-secondary);
+  color: rgba(252, 251, 248, 0.98);
+}
+
+.publication-header__theme-option--dark {
+  color: rgba(20, 17, 15, 0.65);
 }
 
 .dark .publication-header__theme-track {
   border-color: rgba(245, 245, 244, 0.2);
-  background: rgba(245, 245, 244, 0.08);
+  background: rgba(245, 245, 244, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
 .dark .publication-header__theme-knob {
   transform: translateX(calc(100% + 0.18rem));
   border-color: rgba(245, 245, 244, 0.14);
-  background: rgba(58, 58, 58, 0.98);
+  background: rgba(252, 251, 248, 0.96);
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.34);
 }
 
@@ -487,7 +492,7 @@ main > article.prose > section.w-full,
 }
 
 .dark .publication-header__theme-option--dark {
-  color: var(--color-primary);
+  color: rgba(20, 17, 15, 0.92);
 }
 
 .publication-header__menu {
@@ -500,9 +505,9 @@ main > article.prose > section.w-full,
   justify-content: center;
   width: 2.2rem;
   height: 2.2rem;
-  border: 1px solid rgba(15, 23, 32, 0.12);
+  border: 1px solid rgba(15, 23, 32, 0.18);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.58);
+  background: rgba(255, 255, 255, 0.86);
 }
 
 .publication-header__menu-toggle.is-open {
@@ -566,15 +571,16 @@ main > article.prose > section.w-full,
 }
 
 .dark .publication-header {
-  border-top-color: rgba(245, 245, 244, 0.14);
-  border-bottom-color: rgba(245, 245, 244, 0.14);
-  background: rgba(17, 17, 17, 0.94);
+  border-top-color: rgba(245, 245, 244, 0.18);
+  border-bottom-color: rgba(245, 245, 244, 0.18);
+  background: rgba(14, 14, 14, 0.98);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.34);
 }
 
 .dark .publication-header__icon-button,
 .dark .publication-header__menu-toggle {
-  border-color: rgba(245, 245, 244, 0.14);
-  background: rgba(28, 28, 28, 0.72);
+  border-color: rgba(245, 245, 244, 0.2);
+  background: rgba(34, 34, 34, 0.9);
 }
 
 .dark .publication-header__menu-toggle.is-open {
