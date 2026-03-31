@@ -1,0 +1,90 @@
+{{ $posts := sort (where .Site.RegularPages "Section" "posts") "Date" "desc" }}
+{{ $lead := first 1 $posts }}
+{{ $secondary := first 2 (after 1 $posts) }}
+{{ $archive := first 6 (after 3 $posts) }}
+
+<article class="journal-home">
+  <header class="journal-home__masthead">
+    <div class="journal-home__brand-row">
+      <span class="journal-home__kicker">Independent Technical Journal</span>
+      <span class="journal-home__issue">{{ now.Format "January 2, 2006" }}</span>
+    </div>
+    <h1 class="journal-home__title">{{ .Site.Title }}</h1>
+    <p class="journal-home__subtitle">Machine Learning, GPU Systems, and Applied Engineering Notes</p>
+  </header>
+
+  <section class="journal-home__hero">
+    {{ if gt (len $lead) 0 }}
+      {{ with index $lead 0 }}
+      <article class="journal-home__lead">
+        <p class="journal-home__section-label">Featured Essay</p>
+        <h2 class="journal-home__lead-title">
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </h2>
+        <p class="journal-home__lead-summary">
+          {{ .Description | default (.Summary | plainify) }}
+        </p>
+        <div class="journal-home__meta">
+          <span>{{ .Date.Format "January 2, 2006" }}</span>
+          {{ if .ReadingTime }}
+            <span>{{ .ReadingTime }} min read</span>
+          {{ end }}
+        </div>
+      </article>
+      {{ end }}
+    {{ end }}
+
+    <aside class="journal-home__editorial">
+      <p class="journal-home__section-label">From The Desk</p>
+      <div class="journal-home__editorial-copy">
+        {{ .Content }}
+      </div>
+    </aside>
+  </section>
+
+  {{ if gt (len $secondary) 0 }}
+    <section class="journal-home__columns">
+      {{ range $secondary }}
+        <article class="journal-home__story">
+          <p class="journal-home__section-label">Latest Writing</p>
+          <h3 class="journal-home__story-title">
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          </h3>
+          <p class="journal-home__story-summary">
+            {{ .Description | default (.Summary | plainify) }}
+          </p>
+          <div class="journal-home__meta">
+            <span>{{ .Date.Format "January 2, 2006" }}</span>
+            {{ if .ReadingTime }}
+              <span>{{ .ReadingTime }} min read</span>
+            {{ end }}
+          </div>
+        </article>
+      {{ end }}
+    </section>
+  {{ end }}
+
+  {{ if gt (len $archive) 0 }}
+    <section class="journal-home__archive">
+      <div class="journal-home__archive-heading">
+        <h2>Archive</h2>
+        <a href="/myblog/posts/">View all writing</a>
+      </div>
+      <div class="journal-home__archive-list">
+        {{ range $archive }}
+          <article class="journal-home__archive-item">
+            <div>
+              <p class="journal-home__archive-date">{{ .Date.Format "Jan 2, 2006" }}</p>
+              <h3 class="journal-home__archive-title">
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+              </h3>
+            </div>
+            <p class="journal-home__archive-summary">
+              {{ .Description | default (.Summary | plainify) }}
+            </p>
+          </article>
+        {{ end }}
+      </div>
+    </section>
+  {{ end }}
+</article>
