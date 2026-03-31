@@ -66,6 +66,7 @@ body {
   position: relative;
   font-family: var(--font-serif);
   font-size: var(--text-base);
+  font-weight: 500;
   line-height: var(--leading-body);
   letter-spacing: 0.002em;
   color: var(--color-text);
@@ -542,6 +543,7 @@ section.flex.prose {
 .prose p,
 .article-content p {
   font-size: 1em;
+  font-weight: 500;
   margin-bottom: 1.1em;
   line-height: var(--leading-relaxed);
   text-align: left;
@@ -550,6 +552,7 @@ section.flex.prose {
 .prose li,
 .article-content li {
   font-size: 1em;
+  font-weight: 500;
 }
 
 /* ========================================================================
