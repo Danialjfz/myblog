@@ -228,7 +228,6 @@ main > section .prose {
 
 #main-content {
   width: 100%;
-  padding-top: 1rem;
 }
 
 main > article.prose {
@@ -266,7 +265,7 @@ main > article.prose > section.w-full,
 
 .publication-header {
   position: relative;
-  margin: 0;
+  margin: 0 0 1rem;
   border-top: 1px solid rgba(15, 23, 32, 0.14);
   border-bottom: 1px solid rgba(15, 23, 32, 0.14);
   background: rgba(247, 245, 242, 0.96);
@@ -693,6 +692,10 @@ main > article.prose > section.w-full,
 }
 
 @media (max-width: 899px) {
+  .publication-header {
+    margin-bottom: 0.75rem;
+  }
+
   .publication-header__inner {
     grid-template-columns: 1fr auto;
     gap: 0.8rem;
@@ -1319,10 +1322,6 @@ pre code {
 @media (max-width: 639px) {
   body {
     font-size: 1rem;
-  }
-
-  #main-content {
-    padding-top: 0.75rem;
   }
 
   .article-content.max-w-prose,

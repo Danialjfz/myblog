@@ -36,7 +36,7 @@ giteaDefaultServer = "https://git.fsfe.org"
 forgejoDefaultServer = "https://v11.next.forgejo.org"
 
 [header]
-  layout = "fixed" # Clean, professional fixed header
+  layout = "basic" # Keep navigation in normal flow so content never slips underneath it
 
 [footer]
   showMenu = true
