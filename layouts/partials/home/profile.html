@@ -2,15 +2,24 @@
 {{ $lead := first 1 $posts }}
 {{ $secondary := first 2 (after 1 $posts) }}
 {{ $archive := first 6 (after 3 $posts) }}
+{{ $selected := slice
+  (.Site.GetPage "/posts/neural-networks-intuition")
+  (.Site.GetPage "/posts/build-your-first-ml-model")
+  (.Site.GetPage "/posts/ml-mistakes-to-avoid")
+}}
 
 <article class="journal-home">
   <header class="journal-home__masthead">
     <div class="journal-home__brand-row">
       <span class="journal-home__kicker">Independent Technical Journal</span>
-      <span class="journal-home__issue">{{ now.Format "January 2, 2006" }}</span>
+      <span class="journal-home__issue">{{ now.Format "Monday, January 2, 2006" }}</span>
     </div>
     <h1 class="journal-home__title">{{ .Site.Title }}</h1>
     <p class="journal-home__subtitle">Machine Learning, GPU Systems, and Applied Engineering Notes</p>
+    <div class="journal-home__rule-group" aria-hidden="true">
+      <span></span>
+      <span></span>
+    </div>
   </header>
 
   <section class="journal-home__hero">
@@ -35,7 +44,7 @@
     {{ end }}
 
     <aside class="journal-home__editorial">
-      <p class="journal-home__section-label">From The Desk</p>
+      <p class="journal-home__section-label">Editorial Focus</p>
       <div class="journal-home__editorial-copy">
         {{ .Content }}
       </div>
@@ -63,6 +72,28 @@
       {{ end }}
     </section>
   {{ end }}
+
+  <section class="journal-home__selected">
+    <div class="journal-home__archive-heading">
+      <h2>Selected Writing</h2>
+      <span class="journal-home__section-note">A concise starting point for new readers</span>
+    </div>
+    <div class="journal-home__selected-grid">
+      {{ range $selected }}
+        {{ with . }}
+          <article class="journal-home__selected-item">
+            <p class="journal-home__archive-date">{{ .Date.Format "Jan 2, 2006" }}</p>
+            <h3 class="journal-home__story-title">
+              <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            </h3>
+            <p class="journal-home__story-summary">
+              {{ .Description | default (.Summary | plainify) }}
+            </p>
+          </article>
+        {{ end }}
+      {{ end }}
+    </div>
+  </section>
 
   {{ if gt (len $archive) 0 }}
     <section class="journal-home__archive">

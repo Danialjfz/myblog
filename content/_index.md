@@ -8,8 +8,6 @@ sitemap:
   changefreq: daily
 ---
 
-Neural Odyssey is an independent publication on machine learning, GPU computing, and the craft of building AI systems.
+Neural Odyssey is a small technical journal focused on machine learning, GPU computing, and applied AI engineering.
 
-The writing here focuses on first principles, practical implementation, and the engineering judgment that sits between theory and production.
-
-Each piece is meant to be readable, technically serious, and worth returning to.
+The emphasis is on clear explanations, careful implementation, and writing that remains useful after the headline cycle passes.
