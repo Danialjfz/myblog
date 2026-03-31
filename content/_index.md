@@ -8,6 +8,6 @@ sitemap:
   changefreq: daily
 ---
 
-Neural Odyssey is a small technical journal focused on machine learning, GPU computing, and applied AI engineering.
+Neural Odyssey is my technical blog about machine learning, GPU computing, and applied AI engineering.
 
-The emphasis is on clear explanations, careful implementation, and writing that remains useful after the headline cycle passes.
+I use it to share tutorials, implementation notes, and lessons from building real systems, with an emphasis on clear explanations and practical work.

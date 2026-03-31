@@ -11,20 +11,20 @@
 <article class="review-home">
   <header class="review-home__hero">
     <div class="review-home__intro">
-      <p class="review-home__eyebrow">Independent Technical Journal</p>
+      <p class="review-home__eyebrow">Personal Technical Blog</p>
       <h1 class="review-home__title">{{ .Site.Title }}</h1>
       <p class="review-home__dek">
-        Machine learning, CUDA, and systems engineering written as practical tutorials,
-        implementation notes, and durable essays.
+        A personal blog about machine learning, CUDA, and systems engineering,
+        with practical tutorials, implementation notes, and long-form posts.
       </p>
       <div class="review-home__actions">
-        <a href="{{ "posts/" | relLangURL }}" class="review-home__primary-link">Read the Journal</a>
-        <a href="{{ "about/" | relLangURL }}" class="review-home__secondary-link">About the Author</a>
+        <a href="{{ "posts/" | relLangURL }}" class="review-home__primary-link">Read the Blog</a>
+        <a href="{{ "about/" | relLangURL }}" class="review-home__secondary-link">About Me</a>
       </div>
     </div>
 
     <aside class="review-home__aside">
-      <p class="review-home__section-label">Editorial Note</p>
+      <p class="review-home__section-label">About This Blog</p>
       <div class="review-home__aside-copy">
         {{ .Content }}
       </div>
@@ -40,7 +40,7 @@
     {{ if gt (len $lead) 0 }}
       {{ with index $lead 0 }}
         <article class="review-home__feature">
-          <p class="review-home__section-label">Featured Essay</p>
+          <p class="review-home__section-label">Featured Post</p>
           <h2 class="review-home__feature-title">
             <a href="{{ .RelPermalink }}">{{ .Title }}</a>
           </h2>
@@ -84,7 +84,7 @@
     <div class="review-home__section-head">
       <div>
         <p class="review-home__section-label">Start Here</p>
-        <h2 class="review-home__section-title">A concise introduction to the journal</h2>
+        <h2 class="review-home__section-title">A few good places to start</h2>
       </div>
       <a href="{{ "posts/" | relLangURL }}" class="review-home__section-link">View all writing</a>
     </div>
@@ -110,8 +110,8 @@
     <section class="review-home__archive">
       <div class="review-home__section-head">
         <div>
-          <p class="review-home__section-label">Recent Notes</p>
-          <h2 class="review-home__section-title">Latest additions to the archive</h2>
+          <p class="review-home__section-label">Recent Posts</p>
+          <h2 class="review-home__section-title">Latest additions to the blog</h2>
         </div>
       </div>
 
