@@ -39,13 +39,10 @@ enableEmoji = true
       precision = 1
 
 [caches]
-  [caches.getjson]
-    dir = ':cacheDir/:project'
-    maxAge = '24h'
-  [caches.getcsv]
-    dir = ':cacheDir/:project'
-    maxAge = '24h'
   [caches.getresource]
+    dir = ':cacheDir/:project'
+    maxAge = '24h'
+  [caches.misc]
     dir = ':cacheDir/:project'
     maxAge = '24h'
   [caches.images]
