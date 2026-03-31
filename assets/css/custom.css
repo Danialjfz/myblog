@@ -64,7 +64,7 @@
 
 body {
   position: relative;
-  font-family: var(--font-sans);
+  font-family: var(--font-serif);
   font-size: var(--text-base);
   font-weight: 500;
   line-height: var(--leading-body);
@@ -214,6 +214,7 @@ main > section .prose {
 
 .prose {
   max-width: 74ch !important;
+  font-family: var(--font-serif);
   font-size: var(--text-body) !important;
   line-height: var(--leading-relaxed) !important;
 }
@@ -1584,7 +1585,7 @@ section.flex.prose {
 
 /* Article content area */
 .article-content.max-w-prose {
-  font-family: var(--font-sans);
+  font-family: var(--font-serif);
   font-size: var(--text-body);
   line-height: var(--leading-relaxed);
 }
