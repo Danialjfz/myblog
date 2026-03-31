@@ -10,6 +10,9 @@ sitemap:
   priority: 0.8
 ---
 
+> **Abstract**  
+> This post is a checklist of failure modes that quietly ruin ML projects: bad data inspection, leakage, weak evaluation, class imbalance, and irreproducible experiments. The point is not to be dramatic about mistakes, but to make the debugging habits explicit before they cost days of work.
+
 Machine Learning tutorials are all lies.
 
 Okay not really, but they make everything look so smooth. Load data, build model, train, boom—95% accuracy! Ship it!
@@ -336,6 +339,12 @@ My current workflow has all these checks baked in:
 It feels like more work upfront. It's not. It's way less work than debugging for three days because you skipped step 2 and didn't notice your data was garbage.
 
 Plus, you know, your models actually work. Which is kind of the point.
+
+## Related Reading
+
+- [Build Your First ML Model: A No-BS Guide](/posts/build-your-first-ml-model/)
+- [Neural Networks: Building Intuition Beyond the Math](/posts/neural-networks-intuition/)
+- [Welcome to Neural Odyssey](/posts/welcome/)
 
 ---
 

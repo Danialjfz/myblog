@@ -10,6 +10,9 @@ sitemap:
   priority: 0.8
 ---
 
+> **Abstract**  
+> This post walks through a first end-to-end ML workflow using a real image classification task. The goal is not just to train a model, but to build the habits that matter in practice: checking data, splitting correctly, choosing a simple baseline, and evaluating results without fooling yourself.
+
 Most ML tutorials start with MNIST (handwritten digits) or some perfectly cleaned dataset. That's fine for learning, but it doesn't teach you what building a real model actually feels like. Real projects have messy data, unclear requirements, and a dozen decisions you have to make without clear "right" answers.
 
 So let's build something real: a model that can classify images of different types of vehicles. We'll use a subset of real data, deal with actual problems that come up, and make real decisions along the way.
@@ -394,6 +397,12 @@ You'll make mistakes. Your first model will probably underperform. You'll spend 
 The difference between someone who's good at ML and someone who isn't isn't intelligence or math skills. It's the willingness to iterate, debug, and learn from what doesn't work.
 
 Now go build something. Start simple, make sure it works, then make it better.
+
+## Related Reading
+
+- [5 ML Mistakes I Made So You Don't Have To](/posts/ml-mistakes-to-avoid/)
+- [Neural Networks: Building Intuition Beyond the Math](/posts/neural-networks-intuition/)
+- [Welcome to Neural Odyssey](/posts/welcome/)
 
 ---
 

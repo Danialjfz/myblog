@@ -10,6 +10,9 @@ sitemap:
   priority: 0.8
 ---
 
+> **Abstract**  
+> This piece explains neural networks from the intuition upward: what a neuron is, why layers help, how gradient descent changes weights, and why backpropagation is less mystical than it sounds. It is written for readers who want the concepts to feel concrete before diving deeper into the math.
+
 I remember the first time I tried to understand neural networks. It was like 2am, I was three YouTube videos deep, and this guy was drawing circles and arrows on a whiteboard saying "and then the network just *learns*" while waving his hands around. Like, okay thanks dude, super helpful.
 
 I'd bounce between articles that treated me like a five-year-old ("neural networks are like brains!") and papers that opened with equations that looked like someone sneezed on a keyboard. There was no middle ground.
@@ -231,6 +234,12 @@ I'm serious. Reading this is cool and all, but you won't really GET it until you
 That's where real understanding comes from. Not from reading tutorials (even good ones), but from the painful process of making it work yourself.
 
 So yeah. Go break some stuff. It's fun, I promise.
+
+## Related Reading
+
+- [Build Your First ML Model: A No-BS Guide](/posts/build-your-first-ml-model/)
+- [5 ML Mistakes I Made So You Don't Have To](/posts/ml-mistakes-to-avoid/)
+- [Welcome to Neural Odyssey](/posts/welcome/)
 
 ---
 

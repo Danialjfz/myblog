@@ -10,7 +10,8 @@ sitemap:
   priority: 0.8
 ---
 
-
+> **Abstract**  
+> This opening post explains what Neural Odyssey is for: practical writing about machine learning, systems work, debugging, and the messy parts of learning in public. It sets the tone for the blog and the kind of posts that will be worth following.
 
 So here we are. After months of thinking "I should start a blog" and never actually doing it, I finally pulled the trigger. Welcome to Neural Odyssey—my attempt to document what I'm learning, share what I've figured out, and hopefully help someone avoid the mistakes I've made.
 
@@ -55,5 +56,11 @@ I've already got a few posts lined up:
 If there's something specific you want me to cover, or if you have questions about anything I write, reach out. I'm here to learn as much as I'm here to teach.
 
 Thanks for being here at the start of this. Let's see where this goes.
+
+## Related Reading
+
+- [Neural Networks: Building Intuition Beyond the Math](/posts/neural-networks-intuition/)
+- [5 ML Mistakes I Made So You Don't Have To](/posts/ml-mistakes-to-avoid/)
+- [Build Your First ML Model: A No-BS Guide](/posts/build-your-first-ml-model/)
 
 — Danial
