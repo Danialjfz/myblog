@@ -1,26 +1,9 @@
 {{/* Publication-style header */}}
 <header class="publication-header">
-  <div class="publication-header__inner">
-    <div class="publication-header__brand">
-      <a href="{{ "" | relLangURL }}" class="publication-header__brand-link">
-        <span class="publication-header__site-title">{{ .Site.Title | markdownify }}</span>
-      </a>
-    </div>
+  <div class="publication-header__meta-row hidden md:flex">
+    <span class="publication-header__eyebrow">Journal of Machine Learning and Systems</span>
 
-    <nav class="publication-header__nav hidden md:flex" aria-label="Primary">
-      {{ if .Site.Menus.main }}
-        {{ range .Site.Menus.main }}
-          <a
-            href="{{ .URL }}"
-            {{ if or (strings.HasPrefix .URL "http:" ) (strings.HasPrefix .URL "https:" ) }}target="_blank"{{ end }}
-            class="publication-header__nav-link">
-            <p title="{{ .Title }}">{{ .Name | markdownify }}</p>
-          </a>
-        {{ end }}
-      {{ end }}
-    </nav>
-
-    <div class="publication-header__utilities hidden md:flex">
+    <div class="publication-header__utilities">
       {{ if .Site.Params.enableSearch | default false }}
         <button
           id="search-button"
@@ -45,6 +28,15 @@
           </div>
         </button>
       {{ end }}
+    </div>
+  </div>
+
+  <div class="publication-header__main-row">
+    <div class="publication-header__brand">
+      <a href="{{ "" | relLangURL }}" class="publication-header__brand-link">
+        <span class="publication-header__site-title">{{ .Site.Title | markdownify }}</span>
+        <span class="publication-header__site-subtitle">Machine learning, CUDA, and systems engineering notes</span>
+      </a>
     </div>
 
     <div class="publication-header__mobile md:hidden">
@@ -104,6 +96,19 @@
       {{ end }}
     </div>
   </div>
+
+  <nav class="publication-header__nav hidden md:flex" aria-label="Primary">
+    {{ if .Site.Menus.main }}
+      {{ range .Site.Menus.main }}
+        <a
+          href="{{ .URL }}"
+          {{ if or (strings.HasPrefix .URL "http:" ) (strings.HasPrefix .URL "https:" ) }}target="_blank"{{ end }}
+          class="publication-header__nav-link">
+          <p title="{{ .Title }}">{{ .Name | markdownify }}</p>
+        </a>
+      {{ end }}
+    {{ end }}
+  </nav>
 </header>
 
 {{ if .Site.Params.highlightCurrentMenuArea }}
@@ -112,6 +117,7 @@
       var $mainmenu = $(".publication-header");
       var path = window.location.pathname;
       $mainmenu.find('a[href="' + path + '"]').each(function (i, e) {
+        $(e).addClass("active");
         $(e).children("p").addClass("active");
       });
     })();
