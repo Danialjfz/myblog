@@ -398,6 +398,94 @@ main > article.prose > section.w-full,
   background: rgba(255, 255, 255, 0.58);
 }
 
+.publication-header__theme-toggle {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+}
+
+.publication-header__theme-track {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  min-width: 6.75rem;
+  min-height: 2.2rem;
+  padding: 0.18rem;
+  border: 1px solid rgba(15, 23, 32, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.62);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.38);
+}
+
+.publication-header__theme-option {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 1.75rem;
+  font-family: var(--font-sans);
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-light);
+  transition: color 160ms ease;
+}
+
+.publication-header__theme-knob {
+  position: absolute;
+  top: 0.18rem;
+  left: 0.18rem;
+  width: calc(50% - 0.18rem);
+  height: calc(100% - 0.36rem);
+  border: 1px solid rgba(15, 23, 32, 0.08);
+  border-radius: 999px;
+  background: rgba(252, 251, 248, 0.98);
+  box-shadow: 0 6px 14px rgba(15, 23, 32, 0.08);
+  transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease;
+}
+
+.publication-header__theme-toggle:hover .publication-header__theme-track,
+.publication-header__theme-toggle:focus-visible .publication-header__theme-track {
+  border-color: rgba(15, 23, 32, 0.22);
+}
+
+.publication-header__theme-toggle--mobile .publication-header__theme-track {
+  min-width: 6.2rem;
+}
+
+.publication-header__theme-toggle--mobile .publication-header__theme-option {
+  font-size: 0.64rem;
+}
+
+.publication-header__theme-option--light {
+  color: var(--color-secondary);
+}
+
+.dark .publication-header__theme-track {
+  border-color: rgba(245, 245, 244, 0.14);
+  background: rgba(28, 28, 28, 0.76);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.dark .publication-header__theme-knob {
+  transform: translateX(calc(100% + 0.18rem));
+  border-color: rgba(245, 245, 244, 0.08);
+  background: rgba(64, 64, 64, 0.96);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.28);
+}
+
+.dark .publication-header__theme-option--light {
+  color: var(--color-text-light);
+}
+
+.dark .publication-header__theme-option--dark {
+  color: var(--color-primary);
+}
+
 .publication-header__menu {
   position: relative;
 }
