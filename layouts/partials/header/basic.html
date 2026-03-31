@@ -1,6 +1,6 @@
 {{/* Publication-style header */}}
 <header class="publication-header">
-  <div class="publication-header__inner main-menu">
+  <div class="publication-header__inner">
     <div class="publication-header__brand">
       <a href="{{ "" | relLangURL }}" class="publication-header__brand-link">
         <span class="publication-header__site-title">{{ .Site.Title | markdownify }}</span>
@@ -109,7 +109,7 @@
 {{ if .Site.Params.highlightCurrentMenuArea }}
   <script>
     (function () {
-      var $mainmenu = $(".main-menu");
+      var $mainmenu = $(".publication-header");
       var path = window.location.pathname;
       $mainmenu.find('a[href="' + path + '"]').each(function (i, e) {
         $(e).children("p").addClass("active");

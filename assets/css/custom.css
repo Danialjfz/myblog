@@ -265,11 +265,9 @@ main > article.prose > section.w-full,
 
 .publication-header {
   position: relative;
-  margin-bottom: 2rem;
+  margin: 0.8rem 0 2rem;
   border-top: 1px solid rgba(15, 23, 32, 0.14);
   border-bottom: 1px solid rgba(15, 23, 32, 0.14);
-  background: rgba(247, 245, 242, 0.86);
-  backdrop-filter: blur(10px);
 }
 
 .publication-header__inner {
@@ -278,6 +276,7 @@ main > article.prose > section.w-full,
   align-items: center;
   gap: 1.5rem;
   min-height: 4.25rem;
+  padding: 0 0.2rem;
 }
 
 .publication-header__brand-link {
@@ -386,7 +385,6 @@ main > article.prose > section.w-full,
 
 .dark .publication-header {
   border-color: rgba(245, 245, 244, 0.14);
-  background: rgba(17, 17, 17, 0.9);
 }
 
 .dark .publication-mobile-menu {
@@ -691,7 +689,7 @@ main > article.prose > section.w-full,
 
 @media (max-width: 899px) {
   .publication-header {
-    margin-bottom: 1.5rem;
+    margin: 0.45rem 0 1.5rem;
   }
 
   .publication-header__inner {
