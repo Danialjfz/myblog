@@ -228,6 +228,7 @@ main > section .prose {
 
 #main-content {
   width: 100%;
+  padding-top: 1rem;
 }
 
 main > article.prose {
@@ -1318,6 +1319,10 @@ pre code {
 @media (max-width: 639px) {
   body {
     font-size: 1rem;
+  }
+
+  #main-content {
+    padding-top: 0.75rem;
   }
 
   .article-content.max-w-prose,
