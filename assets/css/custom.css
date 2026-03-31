@@ -27,12 +27,12 @@
   --leading-relaxed: 1.9;
 
   /* Academic monochrome palette - Light mode */
-  --color-primary: #161616;
-  --color-primary-hover: #050505;
-  --color-secondary: #111111;
-  --color-accent: #44403c;
-  --color-text: #1c1917;
-  --color-text-light: #57534e;
+  --color-primary: #101010;
+  --color-primary-hover: #000000;
+  --color-secondary: #0f1720;
+  --color-accent: #2f3a46;
+  --color-text: #161311;
+  --color-text-light: #3f3a36;
   --color-background: #f7f5f2;
   --color-surface: #fcfbf8;
   --color-surface-strong: rgba(252, 251, 248, 0.92);
