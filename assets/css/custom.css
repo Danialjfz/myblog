@@ -265,7 +265,7 @@ main > article.prose > section.w-full,
 
 .publication-header {
   position: relative;
-  margin: 0.35rem 0 0.9rem;
+  margin: 0;
   border-top: 1px solid rgba(15, 23, 32, 0.14);
   border-bottom: 1px solid rgba(15, 23, 32, 0.14);
 }
@@ -687,10 +687,6 @@ main > article.prose > section.w-full,
 }
 
 @media (max-width: 899px) {
-  .publication-header {
-    margin: 0.2rem 0 0.75rem;
-  }
-
   .publication-header__inner {
     grid-template-columns: 1fr auto;
     gap: 0.8rem;
