@@ -293,7 +293,7 @@ main > article.prose > section.w-full,
 .publication-header__brand-link {
   display: inline-grid;
   align-items: flex-start;
-  gap: 0.32rem;
+  gap: 0.24rem;
   max-width: min(100%, 28rem);
   color: inherit;
   text-decoration: none;
@@ -312,25 +312,25 @@ main > article.prose > section.w-full,
 .publication-header__site-meta {
   display: inline-flex;
   align-items: center;
-  gap: 0.7rem;
+  gap: 0.55rem;
   max-width: 100%;
 }
 
 .publication-header__site-rule {
-  width: 2.2rem;
+  width: 1.5rem;
   height: 1px;
   flex: 0 0 auto;
-  background: rgba(15, 23, 32, 0.18);
+  background: rgba(15, 23, 32, 0.14);
 }
 
 .publication-header__site-subtitle {
   font-family: var(--font-sans);
-  font-size: 0.66rem;
-  font-weight: 700;
+  font-size: 0.6rem;
+  font-weight: 600;
   line-height: 1.35;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--color-text-light);
+  color: rgba(63, 58, 54, 0.78);
   text-wrap: balance;
 }
 
@@ -605,7 +605,7 @@ main > article.prose > section.w-full,
 }
 
 .dark .publication-header__site-rule {
-  background: rgba(245, 245, 244, 0.18);
+  background: rgba(245, 245, 244, 0.14);
 }
 
 .dark .publication-mobile-menu__panel {
