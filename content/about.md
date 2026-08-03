@@ -1,52 +1,35 @@
 ---
-title: "About Danial Jafarzadeh | ML and Systems Engineering"
+title: "About | Danial Jafarzadeh Jazi"
 date: 2025-08-08
 draft: false
-description: "Learn more about Danial Jafarzadeh, a developer focused on machine learning systems, CUDA, and performance-oriented engineering."
-keywords: ["Danial Jafarzadeh", "machine learning engineer", "systems engineering", "CUDA developer", "AI infrastructure", "about"]
+description: "About Danial Jafarzadeh Jazi — AI systems researcher working on efficient deep learning, GPU performance engineering, and brain state decoding from neuroimaging data."
+keywords: ["Danial Jafarzadeh", "AI systems researcher", "efficient deep learning", "neuroimaging", "research interests"]
 sitemap:
   priority: 0.9
 ---
 
-## Hey, I'm Danial Jafarzadeh
+## About Me
 
-I work at the intersection of machine learning and systems. Most of my time goes into understanding how models behave, how training pipelines fail, and how to make performance-critical code less wasteful.
+I am an AI systems researcher and recent Computer Science graduate (Islamic Azad University, Central Tehran Branch) working at the intersection of efficient deep learning and computational neuroscience. I am currently seeking a research-intensive postgraduate program.
 
-## My Journey
+## Research Interests
 
-My path into software started with curiosity, but what kept me here was the engineering reality underneath the abstractions. I like the part where ideas meet constraints: memory limits, latency budgets, numerical stability, and code that needs to survive contact with production.
+My work focuses on making modern neural architectures faster and applying them to scientific problems:
 
-## What Drives Me
+- **Efficient deep learning**: GPU-optimized kernels, tensor computing frameworks, and performance engineering for transformer workloads
+- **Multimodal transformers**: cross-modal attention and positional encoding strategies for heterogeneous data
+- **Brain state decoding**: deep learning on neuroimaging data (structural MRI, EEG), including medical image analysis for brain tumor detection
+- **Reproducible research**: careful experimental design, benchmarking, and clear scientific communication
 
-I am particularly interested in:
+## Background
 
-- **Machine learning systems**: training loops, evaluation, reproducibility, and failure modes
-- **CUDA and performance engineering**: kernels, memory movement, and practical optimization
-- **Model intuition**: building mental models for why methods work, not just how to call them
-- **Technical writing**: turning debugging experience into material other engineers can use
-
-## Why This Blog?
-
-This blog exists for a few reasons:
-
-1. **Think clearly in public**: writing forces me to close gaps in my own understanding.
-2. **Document hard-won lessons**: especially the ones that only show up after things break.
-3. **Build a durable body of work**: practical posts are more useful than generic hot takes.
-4. **Share implementation detail**: the real work is usually in the edge cases and tradeoffs.
-
-## What You Will Find Here
-
-- ML tutorials that explain both the mechanics and the tradeoffs
-- Notes on debugging model training and data pipelines
-- Systems-focused posts on performance, tooling, and implementation choices
-- Occasional project writeups when something is worth documenting properly
+As a research assistant at Islamic Azad University (2023–2024), I led a first-author project on transformer-based brain state decoding from structural MRI, worked on CNN-based brain tumor detection, and mentored three undergraduate researchers. I also served as a teaching assistant for Advanced Programming. See my [CV](/cv/) for the full record.
 
 ## Contact
 
-If you want to talk about ML engineering, CUDA, or anything I have written here:
+For academic or research-related inquiries:
 
-- **Email**: [Danialj999@gmail.com](mailto:Danialj999@gmail.com)
-- Check out my [projects](/projects/) to see what I've been building
-- Browse the [blog](/posts/) for tutorials and insights
-
-Thanks for reading.
+- **Email**: [danialj999@gmail.com](mailto:danialj999@gmail.com)
+- **LinkedIn**: [linkedin.com/in/danial-jafarzadeh](https://www.linkedin.com/in/danial-jafarzadeh/)
+- **GitHub**: [github.com/Danialjfz](https://github.com/Danialjfz)
+- Explore my [publications](/publications/), [projects](/projects/), and [technical writing](/posts/) for further context

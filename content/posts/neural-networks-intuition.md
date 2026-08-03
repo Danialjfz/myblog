@@ -239,7 +239,7 @@ So yeah. Go break some stuff. It's fun, I promise.
 
 - [Build Your First ML Model: A No-BS Guide](/posts/build-your-first-ml-model/)
 - [5 ML Mistakes I Made So You Don't Have To](/posts/ml-mistakes-to-avoid/)
-- [Welcome to Neural Odyssey](/posts/welcome/)
+- [Welcome](/posts/welcome/)
 
 ---
 

@@ -5,7 +5,7 @@
 theme = "blowfish"
 
 baseURL = "https://danialjfz.github.io/myblog/"
-title = "Danial Jafarzadeh | Neural Odyssey"
+title = "Danial Jafarzadeh"
 defaultContentLanguage = "en"
 enableRobotsTXT = true
 summaryLength = 40

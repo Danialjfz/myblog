@@ -1,82 +1,35 @@
-{{ $selected := slice
-  (.Site.GetPage "/posts/neural-networks-intuition")
-  (.Site.GetPage "/posts/build-your-first-ml-model")
-  (.Site.GetPage "/posts/ml-mistakes-to-avoid")
-}}
-{{ $featured := index $selected 0 }}
-{{ $supporting := after 1 $selected }}
-
 <article class="review-home">
   <header class="review-home__hero">
     <div class="review-home__intro">
-      <p class="review-home__eyebrow">Personal Technical Blog</p>
+      <p class="review-home__eyebrow">AI Systems Researcher</p>
       <h1 class="review-home__title">{{ .Site.Title }}</h1>
       <p class="review-home__dek">
-        A personal blog about machine learning, CUDA, and systems engineering,
-        with practical tutorials, implementation notes, and long-form posts.
+        Efficient deep learning and computational neuroscience: GPU-optimized
+        kernels and multimodal transformer architectures for brain state
+        decoding from neuroimaging data.
       </p>
       <div class="review-home__actions">
-        <a href="{{ "posts/" | relLangURL }}" class="review-home__primary-link">Read the Blog</a>
-        <a href="{{ "about/" | relLangURL }}" class="review-home__secondary-link">About Me</a>
+        <a href="{{ "cv/" | relLangURL }}" class="review-home__primary-link">Curriculum Vitae</a>
+        <a href="mailto:{{ .Site.Language.Params.author.email }}" class="review-home__secondary-link">Contact</a>
       </div>
     </div>
 
     <aside class="review-home__aside">
-      <p class="review-home__section-label">About This Blog</p>
+      <p class="review-home__section-label">Research Interests</p>
       <div class="review-home__aside-copy">
         {{ .Content }}
       </div>
       <ul class="review-home__focus-list">
-        <li class="review-home__focus-item">Neural networks and deep learning intuition</li>
-        <li class="review-home__focus-item">CUDA, performance, and systems engineering</li>
-        <li class="review-home__focus-item">Practical implementation notes and tutorials</li>
+        <li class="review-home__focus-item">Efficient deep learning and GPU-optimized kernels (CUDA, tensor computing)</li>
+        <li class="review-home__focus-item">Multimodal transformer architectures</li>
+        <li class="review-home__focus-item">Brain state decoding from neuroimaging data (MRI, EEG)</li>
       </ul>
     </aside>
   </header>
 
-  <section class="review-home__feature-grid">
-    {{ with $featured }}
-        <article class="review-home__feature">
-          <p class="review-home__section-label">Start Here</p>
-          <h2 class="review-home__feature-title">
-            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-          </h2>
-          <p class="review-home__feature-summary">
-            {{ .Description | default (.Summary | plainify) }}
-          </p>
-          <div class="review-home__meta">
-            <span>{{ .Date.Format "January 2, 2006" }}</span>
-            {{ if .ReadingTime }}
-              <span>{{ .ReadingTime }} min read</span>
-            {{ end }}
-          </div>
-        </article>
-    {{ end }}
-
-    {{ if gt (len $supporting) 0 }}
-      <div class="review-home__stack">
-        {{ range $supporting }}
-          <article class="review-home__story">
-            <p class="review-home__section-label">Also Read</p>
-            <h3 class="review-home__story-title">
-              <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-            </h3>
-            <p class="review-home__story-summary">
-              {{ .Description | default (.Summary | plainify) }}
-            </p>
-            <div class="review-home__meta">
-              <span>{{ .Date.Format "January 2, 2006" }}</span>
-              {{ if .ReadingTime }}
-                <span>{{ .ReadingTime }} min read</span>
-              {{ end }}
-            </div>
-          </article>
-        {{ end }}
-      </div>
-    {{ end }}
-  </section>
-
   <div class="review-home__footer-action">
-    <a href="{{ "posts/" | relLangURL }}" class="review-home__section-link">Browse all writing</a>
+    <a href="{{ "publications/" | relLangURL }}" class="review-home__section-link">Publications</a>
+    <a href="{{ "projects/" | relLangURL }}" class="review-home__section-link">Projects</a>
+    <a href="{{ "about/" | relLangURL }}" class="review-home__section-link">About</a>
   </div>
 </article>

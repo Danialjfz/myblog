@@ -344,7 +344,7 @@ Plus, you know, your models actually work. Which is kind of the point.
 
 - [Build Your First ML Model: A No-BS Guide](/posts/build-your-first-ml-model/)
 - [Neural Networks: Building Intuition Beyond the Math](/posts/neural-networks-intuition/)
-- [Welcome to Neural Odyssey](/posts/welcome/)
+- [Welcome](/posts/welcome/)
 
 ---
 

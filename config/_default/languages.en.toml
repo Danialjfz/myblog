@@ -2,7 +2,7 @@ disabled = false
 languageCode = "en"
 languageName = "English"
 weight = 1
-title = "Neural Odyssey"
+title = "Danial Jafarzadeh"
 
 [params]
   displayName = "EN"
@@ -11,16 +11,19 @@ title = "Neural Odyssey"
   dateFormat = "2 January 2006"
   logo = "img/candle.png"
   # secondaryLogo = "img/secondary-logo.png"
-  description = "Machine learning, CUDA, and systems engineering notes from Danial Jafarzadeh. Practical deep dives into neural networks, model training, and performance-oriented software."
+  description = "Academic profile of Danial Jafarzadeh Jazi — AI systems researcher working on efficient deep learning, GPU-optimized kernels, and brain state decoding from neuroimaging data."
   # copyright = "Copy, _right?_ :thinking_face:"
 
  [params.author]
    name = "Danial Jafarzadeh"
-   email = "Danialj999@gmail.com"
+   email = "danialj999@gmail.com"
    image = "img/vampire.png"
-   headline = "Machine Learning & Systems Engineering"
-   bio = "I write about machine learning systems, GPU programming, and the implementation details behind modern AI workloads."
+   headline = "AI Systems Researcher | Efficient Deep Learning & Neuroimaging"
+   bio = "AI systems researcher working on GPU-optimized kernels and multimodal transformer architectures, with application to brain state decoding from neuroimaging data (MRI, EEG)."
    links = [
      { github = "https://github.com/Danialjfz" },
-     { email = "mailto:Danialj999@gmail.com" },
+     { linkedin = "https://www.linkedin.com/in/danial-jafarzadeh/" },
+     { email = "mailto:danialj999@gmail.com" },
+     # { google-scholar = "https://scholar.google.com/citations?user=YOUR_ID" },
+     # { orcid = "https://orcid.org/YOUR-ORCID" },
    ]

@@ -1,7 +1,7 @@
 # -- Main Menu --
 # The main menu is displayed in the header at the top of the page.
 # Acceptable parameters are name, pageRef, page, url, title, weight.
-# 
+#
 # The simplest menu configuration is to provide:
 #   name = The name to be displayed for this menu link
 #   pageRef = The identifier of the page or section to link to
@@ -11,62 +11,24 @@
 # ordered by weight from lowest to highest.
 
 [[main]]
-name = "Writing"
-pageRef = "posts"
+name = "About"
+pageRef = "about"
 weight = 10
+
+[[main]]
+name = "CV"
+pageRef = "cv"
+weight = 20
+
+[[main]]
+name = "Publications"
+pageRef = "publications"
+weight = 30
 
 [[main]]
 name = "Projects"
 pageRef = "projects"
-weight = 20
-
-[[main]]
-name = "About"
-pageRef = "about"
-weight = 30
-
-[[main]]
-name = "Resume"
-pageRef = "resume"
 weight = 40
-
-#[[main]]
-#  name = "Parent"
-#  weight = 20
-
-#[[main]]
-#  name = "example sub-menu 1"
-#  parent = "Parent"
-#  pageRef = "posts"
-#  weight = 20
-
-#[[main]]
-#  name = "example sub-menu 2"
-#  parent = "Parent"
-#  pageRef = "posts"
-#  weight = 20
-
-#[[subnavigation]]
-#  name = "An interesting topic"
-#  pageRef = "tags/interesting-topic"
-#  weight = 10
-
-#[[subnavigation]]
-#  name = "My Awesome Category"
-#  pre = "github"
-#  pageRef = "categories/awesome"
-#  weight = 20
-
-#[[main]]
-#  name = "Categories"
-#  pageRef = "categories"
-#  weight = 20
-
-#[[main]]
-#  name = "Tags"
-#  pageRef = "tags"
-#  weight = 30
-
 
 # -- Footer Menu --
 # The footer menu is displayed at the bottom of the page, just before
@@ -78,11 +40,11 @@ weight = 40
   weight = 10
 
 [[footer]]
-  name = "Tags"
-  pageRef = "tags"
+  name = "CV"
+  pageRef = "cv"
   weight = 20
 
 [[footer]]
-  name = "Categories"
-  pageRef = "categories"
+  name = "Writing"
+  pageRef = "posts"
   weight = 30

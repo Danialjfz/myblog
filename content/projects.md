@@ -1,24 +1,31 @@
 ---
-title: "Projects by Danial Jafarzadeh | ML and Systems Work"
+title: "Projects | Danial Jafarzadeh Jazi"
 date: 2025-08-08
 draft: false
-description: "Selected projects by Danial Jafarzadeh across machine learning, systems programming, and technical experiments."
-keywords: ["Danial Jafarzadeh projects", "machine learning projects", "systems programming", "CUDA projects", "engineering portfolio"]
+description: "Selected projects by Danial Jafarzadeh Jazi: a GPT language model built from scratch in PyTorch, and GPU performance engineering of GEMM kernels in CUDA."
+keywords: ["Danial Jafarzadeh projects", "GPT from scratch", "CUDA GEMM optimization", "GPU performance engineering", "PyTorch transformer"]
 sitemap:
   priority: 0.7
 ---
 
 ## Projects
 
-This page will collect the projects worth documenting in depth: model-building work, systems experiments, and implementation-heavy side projects.
+### GPT Language Model from Scratch
 
-## What Will Show Up Here
+2025 · Python, PyTorch, tiktoken · [Code](https://github.com/Danialjfz/GPT-Language-Model)
 
-- **ML projects**: training experiments, evaluation pipelines, and model-focused tooling
-- **Systems work**: performance experiments, low-level debugging, and infrastructure notes
-- **Technical writeups**: project breakdowns that explain the engineering choices behind the result
-- **Open source work**: contributions that are interesting enough to unpack
+- **Problem:** Understand transformer language models end to end by implementing every component rather than relying on high-level abstractions.
+- **Approach:** Built a complete GPT-2-style decoder-only transformer (~124M parameters, 12 layers, 12 heads) from scratch in PyTorch: multi-head causal self-attention, learned positional embeddings, GELU feed-forward blocks, plus end-to-end tokenization, training, and inference scripts. Training pipeline uses AdamW with cosine LR schedule and warmup, gradient clipping, mixed-precision (BF16), and periodic checkpointing.
+- **Outcome:** Validation perplexity ~3.0 on Shakespeare, with coherent autoregressive generation via temperature and top-k sampling.
 
-I am keeping this page intentionally small until each project has enough substance to be useful on its own.
+### GPU Performance Engineering: Opti-GEMM
 
-If a project here overlaps with your work or you want to compare approaches, reach out by email.
+2025 – Ongoing · C++, CUDA, CMake, Nsight Compute · [Code](https://github.com/Danialjfz/Opti-GEMM)
+
+- **Problem:** Understand where GPU performance actually comes from by optimizing General Matrix Multiply (GEMM), the core primitive of deep learning workloads.
+- **Approach:** Systematic kernel optimization from a naive global-memory implementation through shared-memory tiling, register blocking, and warp-level primitives, profiled with Nsight Compute against cuBLAS baselines.
+- **Outcome:** Cross-architecture benchmarking on Tesla T4 (Turing) and P100 (Pascal), documenting a 5× speedup via manual shared-memory tiling on cache-less Pascal vs. hardware-cached Turing.
+
+---
+
+If a project here overlaps with your work or you want to compare approaches, [reach out by email](mailto:danialj999@gmail.com).

@@ -4,7 +4,7 @@
 {{ $personID := printf "%s#person" site.BaseURL }}
 
 <meta name="author" content="{{ $author.name }}">
-<meta name="keywords" content="machine learning, CUDA, systems engineering, neural networks, performance engineering, Danial Jafarzadeh">
+<meta name="keywords" content="efficient deep learning, GPU optimization, CUDA, multimodal transformers, brain state decoding, neuroimaging, Danial Jafarzadeh">
 <meta property="og:site_name" content="{{ $siteTitle }}">
 <meta property="og:locale" content="en_US">
 
@@ -17,17 +17,20 @@
   "url": "{{ site.BaseURL }}",
   "email": "{{ $author.email }}",
   "image": "{{ "img/vampire.png" | absURL }}",
-  "jobTitle": "Machine Learning and Systems Engineer",
+  "jobTitle": "AI Systems Researcher",
   "description": "{{ $author.bio }}",
   "sameAs": [
-    "https://github.com/Danialjfz"
+    "https://github.com/Danialjfz",
+    "https://www.linkedin.com/in/danial-jafarzadeh/",
+    "https://arxiv.org/abs/2512.08462"
   ],
   "knowsAbout": [
-    "Machine Learning",
-    "Deep Learning",
-    "CUDA",
+    "Efficient Deep Learning",
     "GPU Programming",
-    "Systems Engineering",
+    "CUDA",
+    "Multimodal Transformers",
+    "Brain State Decoding",
+    "Neuroimaging",
     "Performance Optimization"
   ],
   "knowsLanguage": [
@@ -61,16 +64,12 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Blog",
+  "@type": "ProfilePage",
   "name": "{{ $siteTitle }}",
-  "url": "{{ "posts/" | absURL }}",
+  "url": "{{ site.BaseURL }}",
   "description": "{{ $siteDescription }}",
   "inLanguage": "en-US",
-  "author": {
-    "@type": "Person",
-    "@id": "{{ $personID }}"
-  },
-  "publisher": {
+  "mainEntity": {
     "@type": "Person",
     "@id": "{{ $personID }}"
   }

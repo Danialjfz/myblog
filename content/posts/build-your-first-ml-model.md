@@ -402,7 +402,7 @@ Now go build something. Start simple, make sure it works, then make it better.
 
 - [5 ML Mistakes I Made So You Don't Have To](/posts/ml-mistakes-to-avoid/)
 - [Neural Networks: Building Intuition Beyond the Math](/posts/neural-networks-intuition/)
-- [Welcome to Neural Odyssey](/posts/welcome/)
+- [Welcome](/posts/welcome/)
 
 ---
 
