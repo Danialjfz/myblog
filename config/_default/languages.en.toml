@@ -2,7 +2,7 @@ disabled = false
 languageCode = "en"
 languageName = "English"
 weight = 1
-title = "Danial Jafarzadeh"
+title = "Danial Jafarzadeh Jazi"
 
 [params]
   displayName = "EN"
@@ -15,7 +15,7 @@ title = "Danial Jafarzadeh"
   # copyright = "Copy, _right?_ :thinking_face:"
 
  [params.author]
-   name = "Danial Jafarzadeh"
+   name = "Danial Jafarzadeh Jazi"
    email = "danialj999@gmail.com"
    image = "img/vampire.png"
    headline = "AI Systems Researcher | Efficient Deep Learning & Neuroimaging"

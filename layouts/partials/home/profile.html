@@ -3,6 +3,10 @@
     <div class="review-home__intro">
       <p class="review-home__eyebrow">AI Systems Researcher</p>
       <h1 class="review-home__title">{{ .Site.Title }}</h1>
+      <p class="review-home__status">
+        B.Sc. Computer Science, Islamic Azad University — Central Tehran<br>
+        Seeking a research-intensive graduate program
+      </p>
       <p class="review-home__dek">
         Efficient deep learning and computational neuroscience: GPU-optimized
         kernels and multimodal transformer architectures for brain state
@@ -10,6 +14,7 @@
       </p>
       <div class="review-home__actions">
         <a href="{{ "cv/" | relLangURL }}" class="review-home__primary-link">Curriculum Vitae</a>
+        <a href="{{ "files/Danial_Jafarzadeh_Jazi_CV.pdf" | relLangURL }}" class="review-home__secondary-link">Download PDF</a>
         <a href="mailto:{{ .Site.Language.Params.author.email }}" class="review-home__secondary-link">Contact</a>
       </div>
     </div>
@@ -26,6 +31,24 @@
       </ul>
     </aside>
   </header>
+
+  <section class="review-home__updates">
+    <p class="review-home__section-label">Recent Updates</p>
+    <ul class="review-home__updates-list">
+      <li class="review-home__update">
+        <span class="review-home__update-date">2025</span>
+        <span class="review-home__update-text">First-author preprint <a href="https://arxiv.org/abs/2512.08462">&ldquo;Transformers for Multimodal Brain State Decoding&rdquo;</a> available on arXiv</span>
+      </li>
+      <li class="review-home__update">
+        <span class="review-home__update-date">2025</span>
+        <span class="review-home__update-text">Teaching Assistant for Advanced Programming, Islamic Azad University</span>
+      </li>
+      <li class="review-home__update">
+        <span class="review-home__update-date">2025</span>
+        <span class="review-home__update-text">B.Sc. in Computer Science completed — major GPA 18.74/20 (~3.75/4.0)</span>
+      </li>
+    </ul>
+  </section>
 
   <div class="review-home__footer-action">
     <a href="{{ "publications/" | relLangURL }}" class="review-home__section-link">Publications</a>

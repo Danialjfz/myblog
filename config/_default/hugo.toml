@@ -5,7 +5,7 @@
 theme = "blowfish"
 
 baseURL = "https://danialjfz.github.io/myblog/"
-title = "Danial Jafarzadeh"
+title = "Danial Jafarzadeh Jazi"
 defaultContentLanguage = "en"
 enableRobotsTXT = true
 summaryLength = 40
