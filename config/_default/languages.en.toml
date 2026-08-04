@@ -17,7 +17,7 @@ title = "Danial Jafarzadeh Jazi"
  [params.author]
    name = "Danial Jafarzadeh Jazi"
    email = "danialj999@gmail.com"
-   image = "img/vampire.png"
+   image = "img/candle.png"
    headline = "AI Systems Researcher | Efficient Deep Learning & Neuroimaging"
    bio = "AI systems researcher working on GPU-optimized kernels and multimodal transformer architectures, with application to brain state decoding from neuroimaging data (MRI, EEG)."
    links = [
