@@ -99,7 +99,16 @@
 
           <div id="publication-menu-panel" class="publication-mobile-menu" hidden>
             <div class="publication-mobile-menu__panel">
-              <p class="publication-mobile-menu__eyebrow">Browse the Blog</p>
+              <div class="publication-mobile-menu__eyebrow">
+                <span>Browse the Blog</span>
+                <button
+                  id="publication-menu-close"
+                  type="button"
+                  aria-label="Close navigation"
+                  class="publication-mobile-menu__close">
+                  {{ partial "icon.html" "xmark" }}
+                </button>
+              </div>
               <nav class="publication-mobile-menu__nav" aria-label="Mobile">
                 {{ range .Site.Menus.main }}
                   <a
@@ -225,6 +234,15 @@
       menuPanel.querySelectorAll("a").forEach(function (link) {
         link.addEventListener("click", closeMenu);
       });
+
+      var menuCloseButton = document.getElementById("publication-menu-close");
+      if (menuCloseButton) {
+        menuCloseButton.addEventListener("click", function (event) {
+          event.stopPropagation();
+          closeMenu();
+          menuToggle.focus();
+        });
+      }
     })();
   </script>
 {{ end }}

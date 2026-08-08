@@ -2599,6 +2599,162 @@ iframe {
 }
 
 /* ========================================================================
+   Mobile Robustness Patches
+   ======================================================================== */
+
+/* Prevent long URLs, inline code, and preformatted text from breaking layout */
+.prose a,
+.article-content a,
+.review-home__update-text a,
+.review-home__section-link,
+.review-home__primary-link,
+.review-home__secondary-link,
+.publication-mobile-menu__link,
+.prose code,
+.prose tt {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+pre,
+code {
+  word-break: normal;
+}
+
+/* Ensure flex/grid children can shrink below their intrinsic size */
+.publication-header__brand,
+.publication-header__row > *,
+.review-home__hero > *,
+.review-home__actions,
+.review-home__footer-action {
+  min-width: 0;
+}
+
+/* Mobile header refinements */
+@media (max-width: 640px) {
+  .publication-header {
+    margin-bottom: 0.85rem;
+  }
+
+  .publication-header__brand {
+    padding-right: 0.5rem;
+  }
+
+  .publication-header__site-title {
+    font-size: clamp(1rem, 5.2vw, 1.35rem);
+    line-height: 1.05;
+  }
+
+  .publication-header__icon-button,
+  .publication-header__menu-toggle,
+  .publication-header__theme-button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .publication-header__mobile {
+    gap: 0.35rem;
+  }
+
+  .publication-mobile-menu {
+    top: calc(100% + 0.5rem);
+    width: min(18rem, calc(100vw - 1rem));
+  }
+
+  .publication-mobile-menu__panel {
+    border-radius: 0.9rem;
+  }
+
+  .publication-mobile-menu__eyebrow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.75rem 0.85rem 0.5rem;
+  }
+
+  .publication-mobile-menu__close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--color-text-light);
+    cursor: pointer;
+  }
+
+  .publication-mobile-menu__close:hover,
+  .publication-mobile-menu__close:focus-visible {
+    color: var(--color-secondary);
+    background: rgba(15, 23, 32, 0.06);
+  }
+
+  .dark .publication-mobile-menu__close:hover,
+  .dark .publication-mobile-menu__close:focus-visible {
+    background: rgba(245, 245, 244, 0.08);
+  }
+
+  .publication-mobile-menu__link {
+    min-height: 44px;
+    padding: 0.85rem;
+  }
+
+  .publication-mobile-menu__link span {
+    font-size: 0.86rem;
+  }
+
+  /* Homepage: scale down hero typography on small screens */
+  .review-home__title {
+    font-size: clamp(2rem, 11vw, 3.1rem);
+  }
+
+  .review-home__dek {
+    font-size: 1rem;
+    line-height: 1.72;
+  }
+
+  .review-home__status {
+    font-size: 0.84rem;
+  }
+
+  .review-home__actions {
+    gap: 0.65rem;
+  }
+
+  .review-home__primary-link,
+  .review-home__secondary-link,
+  .review-home__section-link {
+    min-height: 44px;
+  }
+
+  .review-home__focus-list {
+    font-size: 0.88rem;
+  }
+}
+
+/* Very narrow phones */
+@media (max-width: 380px) {
+  body.max-w-7xl {
+    padding-left: 0.875rem !important;
+    padding-right: 0.875rem !important;
+  }
+
+  .review-home__title {
+    font-size: clamp(1.85rem, 11vw, 2.2rem);
+  }
+
+  .review-home__actions {
+    flex-direction: column;
+  }
+}
+
+/* ========================================================================
    Print Styles
    ======================================================================== */
 
