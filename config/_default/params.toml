@@ -24,7 +24,7 @@ disableTextInHeader = false
 
 # defaultBackgroundImage = "IMAGE.jpg" # used as default for background images 
 # defaultFeaturedImage = "IMAGE.jpg" # used as default for featured images in all articles
-defaultSocialImage = "/android-chrome-512x512.png"
+defaultSocialImage = "img/social-card.png"
 
 highlightCurrentMenuArea = true  # Highlight current section
 smartTOC = true  # Smart table of contents

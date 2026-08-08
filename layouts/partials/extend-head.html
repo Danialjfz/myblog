@@ -3,11 +3,6 @@
 {{ $siteTitle := site.Title }}
 {{ $personID := printf "%s#person" site.BaseURL }}
 
-<meta name="author" content="{{ $author.name }}">
-<meta name="keywords" content="efficient deep learning, GPU optimization, CUDA, multimodal transformers, brain state decoding, neuroimaging, Danial Jafarzadeh">
-<meta property="og:site_name" content="{{ $siteTitle }}">
-<meta property="og:locale" content="en_US">
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -43,25 +38,6 @@
       "name": "English"
     }
   ]
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "{{ $siteTitle }}",
-  "url": "{{ site.BaseURL }}",
-  "description": "{{ $siteDescription }}",
-  "inLanguage": "en-US",
-  "author": {
-    "@type": "Person",
-    "@id": "{{ $personID }}"
-  },
-  "publisher": {
-    "@type": "Person",
-    "@id": "{{ $personID }}"
-  }
 }
 </script>
 
