@@ -1,78 +1,70 @@
-# Danial Jafarzadeh Jazi — Academic Portfolio
+# My site
 
-A static academic portfolio and research blog built with [Hugo](https://gohugo.io/) and the [Blowfish](https://blowfish.page/) theme, deployed to GitHub Pages.
+This is my academic portfolio / research blog, built with [Hugo](https://gohugo.io/) and the Blowfish theme, hosted on GitHub Pages at:
 
-**Live site:** https://danialjfz.github.io/myblog/
+**https://danialjfz.github.io/myblog/**
+
+## Quick commands
+
+```bash
+# Run locally with drafts
+make serve
+
+# Build exactly like CI does
+make build
+
+# Clean generated junk
+make clean
+```
 
 ## Stack
 
-- **Generator:** Hugo Extended 0.159.1
-- **Theme:** Blowfish 2.88.x (vendored in `themes/blowfish/`)
-- **Styling:** Tailwind CSS + custom `assets/css/custom.css`
-- **Deployment:** GitHub Pages via `.github/workflows/hugo.yaml`
+- **Hugo:** 0.159.1 (extended)
+- **Theme:** Blowfish 2.88.x, but it's a vendored/patched copy in `themes/blowfish/`
+- **Base URL:** `/myblog/` because GitHub Pages serves it from the repo path
 
-## Local development
+## Adding stuff
 
-```bash
-# Serve with drafts and live reload
-make serve
-
-# Or directly:
-hugo server --buildDrafts --bind 127.0.0.1 --baseURL http://localhost:1313/myblog/
-```
-
-## Build for production
+Use the archetypes so front matter stays consistent:
 
 ```bash
-make build
-```
-
-## Adding content
-
-Use the provided archetypes to keep front matter consistent:
-
-```bash
-# New blog post
-hugo new content posts/my-post-title.md
-
-# New publication entry
+hugo new content posts/my-cool-idea.md
 hugo new content publications/my-paper.md
-
-# New project entry
 hugo new content projects/my-project.md
 ```
 
-## Project structure
+## Where things live
 
-```
-.
-├── archetypes/            # Content templates
-├── assets/
-│   ├── css/custom.css     # Theme overrides
-│   └── img/               # Processed images (social card, logo)
-├── config/_default/       # Hugo configuration
-├── content/               # All site content
-├── layouts/               # Custom layout partials
-├── static/                # Static assets (favicons, CV PDF, robots.txt)
-├── themes/blowfish/       # Vendored theme (submodule conversion blocked; see below)
-└── .github/workflows/     # Deployment automation
-```
+- `content/` — all pages and posts
+- `content/cv.md` — my CV (keep this in sync with the PDF in `static/files/`)
+- `assets/css/custom.css` — all my visual overrides
+- `layouts/partials/` — custom header, homepage, head extensions, favicons
+- `static/files/Danial_Jafarzadeh_Jazi_CV.pdf` — downloadable CV
+- `static/robots.txt`, `static/site.webmanifest` — SEO bits
 
-## Theme maintenance note
+## Theme note (read this before updating)
 
-The current `themes/blowfish/` directory is a vendored (copied) copy that has been patched to work with Hugo 0.159.1. Converting it to a clean Git submodule is blocked because:
+The theme is **not** a submodule right now. The copy in `themes/blowfish/` has been patched to work with Hugo 0.159.1. If you try to replace it with a clean upstream submodule, the build breaks because:
 
-- Upstream Blowfish tags through v2.99.0 declare a maximum Hugo version below 0.159.1.
-- The vendored copy contains patches (e.g., `config.toml` max version, removed problematic head-image loop) that do not match any upstream tag.
+1. Upstream tags through v2.99.0 don't claim support for Hugo 0.159.1.
+2. The head partial in the clean theme crashes on this config due to a nil image resource.
 
-To update the theme safely in the future, either:
+So don't blindly swap it. If you ever want a clean submodule, you need to either:
 
-1. Fork `nunocoracao/blowfish`, apply the same patches, and submodule to your fork.
-2. Wait for an upstream tag that supports Hugo 0.159.1+, test thoroughly, then migrate.
+- Fork Blowfish, apply the same patches, and submodule to your fork, or
+- Downgrade Hugo to ≤ 0.157.0 and use upstream v2.99.0.
 
-## Maintenance checklist
+Until then, leave `themes/blowfish/` alone unless you know what you're changing.
 
-- [ ] Update CV PDF in `static/files/` when `content/cv.md` changes
-- [ ] Add alt text to every image in new posts
-- [ ] Run `make build` before committing layout/CSS changes
-- [ ] Keep `README.md` theme and Hugo versions in sync with reality
+## Before publishing
+
+- [ ] Run `make build` and make sure it exits cleanly.
+- [ ] If you updated `content/cv.md`, regenerate or replace `static/files/Danial_Jafarzadeh_Jazi_CV.pdf`.
+- [ ] Add alt text to any images in new posts.
+- [ ] Keep titles and descriptions under ~160 chars where possible (good for SEO/social previews).
+
+## Random reminders
+
+- The site uses a `/myblog/` baseURL, so internal links should use `relURL` or page refs, not absolute paths.
+- The social card image lives at `assets/img/social-card.png` and is referenced in `config/_default/params.toml`.
+- Custom JSON-LD / schema stuff is in `layouts/partials/extend-head.html`.
