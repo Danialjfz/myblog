@@ -32,8 +32,8 @@ weight = 40
 
 [[main]]
 name = "Writing"
-pageRef = "posts"
-weight = 50 
+url = "https://danialjfz.bearblog.dev"
+weight = 50
 
 # -- Footer Menu --
 # The footer menu is displayed at the bottom of the page, just before
