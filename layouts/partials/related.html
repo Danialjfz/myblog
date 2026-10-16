@@ -1,0 +1,40 @@
+{{/* Related content — quiet editorial reading list (overrides theme card grid) */}}
+{{ if .Params.showRelatedContent | default (.Site.Params.article.showRelatedContent | default false) }}
+  {{ $related := .Site.RegularPages.Related . | first .Site.Params.article.relatedContentLimit }}
+  {{ with $related }}
+    <nav class="related" aria-labelledby="related-heading">
+      <h2 id="related-heading" class="related__label">{{ i18n "article.related_articles" }}</h2>
+      <ul class="related__list">
+        {{ range . }}
+          {{ $href := .RelPermalink }}
+          {{ $external := false }}
+          {{ with .Params.externalUrl }}
+            {{ $href = . }}
+            {{ $external = true }}
+          {{ end }}
+          <li class="related__item">
+            <a
+              class="related__link"
+              href="{{ $href }}"
+              {{ if $external }}target="_blank" rel="external"{{ end }}>
+              <span class="related__title">
+                {{ .LinkTitle | emojify }}
+                {{ if and .Draft .Site.Params.article.showDraftLabel }}
+                  <span class="related__draft">{{ i18n "article.draft" | plainify }}</span>
+                {{ end }}
+              </span>
+              <span class="related__meta">
+                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}</time>
+                {{ if $external }}
+                  <span class="related__arrow" aria-hidden="true">&#8599;</span>
+                {{ else }}
+                  <span class="related__arrow" aria-hidden="true">&rarr;</span>
+                {{ end }}
+              </span>
+            </a>
+          </li>
+        {{ end }}
+      </ul>
+    </nav>
+  {{ end }}
+{{ end }}

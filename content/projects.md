@@ -1,5 +1,6 @@
 ---
 title: "Projects | Danial Jafarzadeh Jazi"
+linkTitle: "Projects"
 date: 2025-08-08
 draft: false
 description: "Selected projects by Danial Jafarzadeh Jazi: a GPT language model built from scratch in PyTorch, and GPU performance engineering of GEMM kernels in CUDA."

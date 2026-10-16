@@ -1,5 +1,6 @@
 ---
 title: "Curriculum Vitae | Danial Jafarzadeh Jazi"
+linkTitle: "Curriculum Vitae"
 date: 2025-08-08
 draft: false
 description: "Curriculum vitae of Danial Jafarzadeh Jazi — AI systems researcher working on efficient deep learning, GPU-optimized kernels, and brain state decoding from neuroimaging data."

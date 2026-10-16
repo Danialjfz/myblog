@@ -1,5 +1,6 @@
 ---
 title: "About | Danial Jafarzadeh Jazi"
+linkTitle: "About"
 date: 2025-08-08
 draft: false
 description: "About Danial Jafarzadeh Jazi — AI systems researcher working on efficient deep learning, GPU performance engineering, and brain state decoding from neuroimaging data."

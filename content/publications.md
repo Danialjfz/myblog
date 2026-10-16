@@ -1,5 +1,6 @@
 ---
 title: "Publications | Danial Jafarzadeh Jazi"
+linkTitle: "Publications"
 date: 2025-08-08
 draft: false
 description: "Publications and preprints by Danial Jafarzadeh Jazi on multimodal brain state decoding and efficient deep learning."
