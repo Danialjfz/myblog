@@ -9,7 +9,7 @@ title = "Danial Jafarzadeh Jazi"
   isoCode = "en"
   rtl = false
   dateFormat = "2 January 2006"
-  logo = "img/candle.png"
+  # logo = "img/portrait.jpg" # uncomment when you add a professional headshot
   # secondaryLogo = "img/secondary-logo.png"
   description = "Academic profile of Danial Jafarzadeh Jazi — AI systems researcher working on efficient deep learning, GPU-optimized kernels, and brain state decoding from neuroimaging data."
   # copyright = "Copy, _right?_ :thinking_face:"
@@ -17,7 +17,7 @@ title = "Danial Jafarzadeh Jazi"
  [params.author]
    name = "Danial Jafarzadeh Jazi"
    email = "danialj999@gmail.com"
-   image = "img/candle.png"
+   # image = "img/portrait.jpg" # uncomment when you add a professional headshot
    headline = "AI Systems Researcher | Efficient Deep Learning & Neuroimaging"
    bio = "AI systems researcher working on GPU-optimized kernels and multimodal transformer architectures, with application to brain state decoding from neuroimaging data (MRI, EEG)."
    links = [

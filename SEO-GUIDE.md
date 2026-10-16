@@ -5,8 +5,8 @@ This document outlines all the SEO improvements implemented to help your blog ap
 ## ✅ Implemented SEO Improvements
 
 ### 1. **Site Title & Branding**
-- Updated site title to: "Danial Jafarzadeh - Developer Blog | Tech Insights & Tutorials"
-- Changed author name from "Dani" to full name "Danial Jafarzadeh"
+- Site title set to: "Danial Jafarzadeh Jazi"
+- Author name is the full name "Danial Jafarzadeh Jazi"
 - Added descriptive subtitle for better context
 
 ### 2. **Meta Descriptions & Keywords**
@@ -17,10 +17,10 @@ This document outlines all the SEO improvements implemented to help your blog ap
 ### 3. **Structured Data (JSON-LD)**
 - Added Person schema markup with:
   - Your full name
-  - Job title (Software Developer)
+  - Job title (AI Systems Researcher)
   - Professional description
   - Skills and areas of expertise
-- Added Blog schema markup for the site
+- Added ProfilePage schema markup for the site
 
 ### 4. **Search Engine Directives**
 - Set `robots = "index, follow"` to encourage indexing

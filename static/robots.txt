@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /admin/
-Disallow: /private/
 
 Sitemap: https://danialjfz.github.io/myblog/sitemap.xml

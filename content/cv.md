@@ -10,7 +10,7 @@ sitemap:
 
 ## Curriculum Vitae
 
-**[Download CV as PDF](/myblog/files/Danial_Jafarzadeh_Jazi_CV.pdf)**
+**[Download CV as PDF]({{< staticfile "files/Danial_Jafarzadeh_Jazi_CV.pdf" >}})**
 
 **Danial Jafarzadeh Jazi**
 Tehran, Iran · [danialj999@gmail.com](mailto:danialj999@gmail.com) · [LinkedIn](https://www.linkedin.com/in/danial-jafarzadeh/) · [GitHub](https://github.com/danialjfz)

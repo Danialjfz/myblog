@@ -1,6 +1,6 @@
-# SEO Implementation Guide for Neural Odyssey
+# SEO Implementation Guide
 
-This guide covers all the SEO optimizations that have been implemented and additional steps you can take to improve your search engine rankings.
+This guide covers the SEO optimizations that have been implemented and additional steps you can take to improve your search engine rankings.
 
 ## ✅ Already Implemented
 
@@ -26,8 +26,7 @@ This guide covers all the SEO optimizations that have been implemented and addit
 - **Status**: ✅ Enhanced
 - Implemented schemas:
   - **Person Schema**: Your professional identity
-  - **Website Schema**: Site structure and search functionality
-  - **Blog Schema**: Content categorization
+  - **ProfilePage Schema**: Wraps the Person entity for profile-page rich results
   - **Article Schema**: Individual blog posts (theme-provided)
 - Google will display rich snippets in search results
 
@@ -171,9 +170,7 @@ Currently commented out:
 - Minimize third-party scripts
 
 ### 10. **Add Alt Text to Images**
-**Current Images**:
-- `/static/img/vampire.png` (your profile picture)
-- `/static/img/candle.png` (logo)
+**Current state**: No profile picture or logo is set — add alt text when you add a professional headshot (`assets/img/`) and reference it in `config/_default/languages.en.toml`.
 
 **To Do**:
 When adding images to blog posts, always include alt text:
@@ -206,7 +203,7 @@ When creating a new post, ensure:
 
 ```markdown
 ---
-title: "Descriptive Title with Target Keyword | Neural Odyssey"
+title: "Descriptive Title with Target Keyword | Danial Jafarzadeh Jazi"
 date: 2025-XX-XX
 draft: false
 description: "Compelling 150-160 character meta description with target keyword"
